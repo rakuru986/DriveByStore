@@ -14,6 +14,5 @@ namespace Data
         public DateTime orderShipped { get; set; }
         public string orderTrackingNumber { get; set; }
         public double orderTotal { get; set; }
-
     }
 }

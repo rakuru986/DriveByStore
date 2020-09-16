@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{DA103C64-CEB2-4F27-B3EA-ACC2B441297C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{DA103C64-CEB2-4F27-B3EA-ACC2B441297C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{BB41CBCF-B9EC-4B94-BB61-687CA27B1320}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{BB41CBCF-B9EC-4B94-BB61-687CA27B1320}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2D9B9B7E-BE22-44A2-83F3-00572E1E0136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{2D9B9B7E-BE22-44A2-83F3-00572E1E0136}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Facade\Facade.csproj", "{CB313DA5-1DF3-4816-A6AC-4084A621A107}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csproj", "{CB313DA5-1DF3-4816-A6AC-4084A621A107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{04701CA6-8275-4B94-9514-84C5D17A5B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{04701CA6-8275-4B94-9514-84C5D17A5B1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pages", "Pages\Pages.csproj", "{E4718DE3-5944-4949-9497-1FDE70DE6CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pages", "Pages\Pages.csproj", "{E4718DE3-5944-4949-9497-1FDE70DE6CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D436FA6D-666A-4C7D-9955-5073C40F409E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{D436FA6D-666A-4C7D-9955-5073C40F409E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft", "Soft\Soft.csproj", "{E7262917-48AA-400E-86BD-C9C231387975}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{D436FA6D-666A-4C7D-9955-5073C40F409E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D436FA6D-666A-4C7D-9955-5073C40F409E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D436FA6D-666A-4C7D-9955-5073C40F409E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7262917-48AA-400E-86BD-C9C231387975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7262917-48AA-400E-86BD-C9C231387975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7262917-48AA-400E-86BD-C9C231387975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7262917-48AA-400E-86BD-C9C231387975}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
