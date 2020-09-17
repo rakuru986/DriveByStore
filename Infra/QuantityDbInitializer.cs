@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
+﻿
+
 //using Projekt.Data.Basketball;
 //using Projekt.Core.Basketball;
 //using Projekt.Core.Football;
 //using Projekt.Data.Common;
 //using Projekt.Data.Football;
 
-namespace Projekt.Infra
+namespace DriveByStore.Infra
 {
     public static class QuantityDbInitializer
     {

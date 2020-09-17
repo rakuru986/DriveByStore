@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DriveByStore.Data.Common;
+using DriveByStore.Domain.Common;
 using Microsoft.EntityFrameworkCore;
-using Projekt.Data.Common;
-using Projekt.Domain.Common;
 
-namespace Projekt.Infra
+namespace DriveByStore.Infra
 {
     public abstract class BaseRepository<TDomain, TData> : ICrudMethods<TDomain>
         where TData : NamedEntityData, new()

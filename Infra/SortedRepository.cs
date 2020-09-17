@@ -2,11 +2,11 @@
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using DriveByStore.Data.Common;
+using DriveByStore.Domain.Common;
 using Microsoft.EntityFrameworkCore;
-using Projekt.Data.Common;
-using Projekt.Domain.Common;
 
-namespace Projekt.Infra
+namespace DriveByStore.Infra
 {
     public abstract class SortedRepository<TDomain, TData> : BaseRepository<TDomain, TData>, ISorting
         where TData : NamedEntityData, new()

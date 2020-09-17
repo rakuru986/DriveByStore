@@ -1,8 +1,7 @@
-﻿using Data;
+﻿using DriveByStore.Data;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace Projekt.Infra
+namespace DriveByStore.Infra
 {
     public class QuantityDbContext : DbContext
     {

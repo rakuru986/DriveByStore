@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>DriveByStore..Aids</AssemblyName>
+    <RootNamespace>DriveByStore..Aids</RootNamespace>
+  </PropertyGroup>
+
+</Project>

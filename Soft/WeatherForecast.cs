@@ -1,6 +1,6 @@
 using System;
 
-namespace Soft
+namespace DriveByStore.Soft
 {
     public class WeatherForecast
     {

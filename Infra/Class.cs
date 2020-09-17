@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Infra
+﻿namespace DriveByStore.Infra
 {
     public class Class
     {

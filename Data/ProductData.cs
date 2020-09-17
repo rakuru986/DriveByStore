@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Data
+﻿namespace DriveByStore.Data
 {
     public abstract class ProductData
     {
