@@ -6,12 +6,21 @@
 //using Projekt.Data.Common;
 //using Projekt.Data.Football;
 
+using System.Collections.Generic;
+using System.Linq;
+using Core;
+using DriveByStore.Data;
+using DriveByStore.Data.Common;
+using Microsoft.EntityFrameworkCore;
+
 namespace DriveByStore.Infra
 {
     public static class QuantityDbInitializer
     {
 	    public static void Initialize(QuantityDbContext db)
         {
+            InitializeProductData(Products.Club, db);
+
             //if (db.BasketballClub.Any()) return;
             //InitializeBBData(AtlantaHawks.Club, AtlantaHawks.Players, db);
             //InitializeBBData(BostonCeltics.Club, BostonCeltics.Players, db);
@@ -67,27 +76,33 @@ namespace DriveByStore.Infra
             //InitializeFBData(Wolverhampton.Club, Arsenal.Players, db);
         }
 
-        //private static void InitializeBBData(BBClubData club, List<BBPlayerData> players,
-        //    QuantityDbContext db)
-        //{
-        //    AddBasketballClub(club, db);
-        //    AddBasketballPlayers(players, club.Id, db);
-        //    db.SaveChanges();
-        //}
-        //private static T getItem<T>(IQueryable<T> set, string id) where T : UniqueEntityData
-        //    => set.FirstOrDefaultAsync(m => m.Id == id).GetAwaiter().GetResult();
+        private static void InitializeProductData(CoreProductData product,
+            QuantityDbContext db)
+        {
+            AddProductData(product, db);
+            
+            db.SaveChanges();
+        }
+        private static T getItem<T>(IQueryable<T> set, string id) where T : ProductData
+            => set.FirstOrDefaultAsync(m => m.productId == id).GetAwaiter().GetResult();
 
-        //private static void AddBasketballClub(BBClubData club, QuantityDbContext db)
-        //{
-        //    var o = getItem(db.BasketballClub, club.Id);
-        //    db.BasketballClub.Add(
-        //        new BasketballClubData
-        //        {
-        //            Id = club.Id,
-        //            Code = club.Code,
-        //            Name = club.Name
-        //        });
-        //}
+        private static void AddProductData(CoreProductData product, QuantityDbContext db)
+        {
+            var o = getItem(db.Products, product.ProductId);
+            db.Products.Add(
+                new ProductData
+                {
+                    productId = product.ProductId,
+                    productName = product.ProductName,
+                    productPrice = product.ProductPrice,
+                    productImage = product.ProductImage,
+                    productCategoryId = product.ProductCategoryId,
+                    productCategoryName = product.ProductCategoryName,
+                    productStock = product.ProductStock,
+                    productDescription = product.ProductDescription,
+
+                });
+        }
         //private static void AddBasketballPlayers(IEnumerable<BBPlayerData> players, string clubId,
         //    QuantityDbContext db)
         //{
@@ -121,7 +136,7 @@ namespace DriveByStore.Infra
 
         //private static void AddFootballClub(FBClubData club, QuantityDbContext db)
         //{
-	       // var o = getItem(db.FootballClub, club.Id);
+        // var o = getItem(db.FootballClub, club.Id);
         //    db.FootballClub.Add(
         //        new FootballClubData
         //        {
@@ -135,10 +150,10 @@ namespace DriveByStore.Infra
         //private static void AddFootballPlayers(IEnumerable<FBPlayerData> players, string clubId,
         //    QuantityDbContext db)
         //{
-	       // foreach (var d in from d in players
-		      //  let o = getItem(db.FootballPlayer, d.Id)
-		      //  where o is null
-		      //  select d)
+        // foreach (var d in from d in players
+        //  let o = getItem(db.FootballPlayer, d.Id)
+        //  where o is null
+        //  select d)
         //    {
         //        db.FootballPlayer.Add(
         //            new FootballPlayerData
