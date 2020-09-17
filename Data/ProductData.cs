@@ -9,6 +9,7 @@
         public double productCategoryId { get; set; }
         public string productCategoryName { get; set; }
         public string productStock { get; set; }
+        public string productDescription { get; set; }
 
     }
 }
