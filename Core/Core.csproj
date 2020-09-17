@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>DriveByStore.Core</AssemblyName>
+    <RootNamespace>DriveByStore.Core</RootNamespace>
   </PropertyGroup>
 
 </Project>

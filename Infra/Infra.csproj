@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>DriveByStore.Infra</AssemblyName>
+    <RootNamespace>DriveByStore.Infra</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

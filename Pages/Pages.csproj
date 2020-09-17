@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>Projekt.Pages</AssemblyName>
-    <RootNamespace>Projekt.Pages</RootNamespace>
+    <AssemblyName>DriveByStore.Pages</AssemblyName>
+    <RootNamespace>DriveByStore..Pages</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
