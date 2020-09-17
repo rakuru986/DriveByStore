@@ -1,6 +1,6 @@
 ﻿namespace Data
 {
-    public class ShoppingCartItem
+    public class ShoppingCartItemData
     {
         public int ShoppingCartItemId { get; set; }
         public ProductData Product { get; set; }
