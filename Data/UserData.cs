@@ -8,6 +8,6 @@
         public string userFirstName { get; set; }
         public string userLastName { get; set; }
         public string userAddress { get; set; }
-        public string  userCity { get; set; }
+        public string userCity { get; set; }
     }
 }
