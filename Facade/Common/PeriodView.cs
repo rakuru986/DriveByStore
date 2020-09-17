@@ -1,8 +1,7 @@
 ﻿using System;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Projekt.Facade.Common
+namespace Facade.Common
 {
     public abstract class PeriodView : UniqueEntityView
     {

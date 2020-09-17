@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projekt.Data.Common
+namespace DriveByStore.Data.Common
 {
     public abstract class PeriodData : UniqueEntityData
     { 

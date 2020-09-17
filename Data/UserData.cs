@@ -1,4 +1,4 @@
-﻿namespace Data
+﻿namespace DriveByStore.Data
 {
     public class UserData
     {

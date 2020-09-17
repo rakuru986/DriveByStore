@@ -1,6 +1,6 @@
-﻿using Projekt.Data.Common;
+﻿using DriveByStore.Data.Common;
 
-namespace Projekt.Domain.Common
+namespace DriveByStore.Domain.Common
 {
     public abstract class Entity<TData> where TData: NamedEntityData, new()
     {

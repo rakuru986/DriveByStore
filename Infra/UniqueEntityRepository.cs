@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
+using DriveByStore.Data.Common;
+using DriveByStore.Domain.Common;
 using Microsoft.EntityFrameworkCore;
-using Projekt.Data.Common;
-using Projekt.Domain.Common;
 
-namespace Projekt.Infra
+namespace DriveByStore.Infra
 {
     public abstract class UniqueEntityRepository<TDomain, TData> : PaginatedRepository<TDomain, TData>
         where TData : UniqueEntityData, new()

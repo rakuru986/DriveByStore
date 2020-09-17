@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Projekt.Domain.Common
+namespace DriveByStore.Domain.Common
 {
     public interface ICrudMethods<T>
     {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Domain
+﻿namespace DriveByStore.Domain
 {
     public class Class1
     {

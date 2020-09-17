@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Core
+﻿namespace DriveByStore.Core
 {
     public class CoreProductData
     {

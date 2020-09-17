@@ -1,4 +1,4 @@
-﻿namespace Projekt.Facade.Common
+﻿namespace Facade.Common
 {
     public abstract class UniqueEntityView : NamedView
     {

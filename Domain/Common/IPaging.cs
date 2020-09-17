@@ -1,4 +1,4 @@
-﻿namespace Projekt.Domain.Common
+﻿namespace DriveByStore.Domain.Common
 {
     public interface IPaging
     {

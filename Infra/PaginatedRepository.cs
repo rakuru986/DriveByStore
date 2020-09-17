@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
+using DriveByStore.Data.Common;
+using DriveByStore.Domain.Common;
 using Microsoft.EntityFrameworkCore;
-using Projekt.Data.Common;
-using Projekt.Domain.Common;
 
-namespace Projekt.Infra
+namespace DriveByStore.Infra
 {
     public abstract class PaginatedRepository<TDomain, TData> : FilteredRepository<TDomain, TData>, IPaging
         where TData : NamedEntityData, new()
