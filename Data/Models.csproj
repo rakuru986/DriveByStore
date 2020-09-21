@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>DriveByStore.Data</AssemblyName>
-    <RootNamespace>DriveByStore.Data</RootNamespace>
+    <AssemblyName>DriveByStore.Models</AssemblyName>
+    <RootNamespace>DriveByStore.Models</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

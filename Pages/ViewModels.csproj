@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>DriveByStore.Pages</AssemblyName>
-    <RootNamespace>DriveByStore..Pages</RootNamespace>
+    <AssemblyName>DriveByStore.ViewModels</AssemblyName>
+    <RootNamespace>DriveByStore.ViewModels</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,9 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aids\Aids.csproj" />
-    <ProjectReference Include="..\Facade\Facade.csproj" />
-    <ProjectReference Include="..\Infra\Infra.csproj" />
+    <ProjectReference Include="..\Aids\Util.csproj" />
+    <ProjectReference Include="..\Facade\Services.csproj" />
   </ItemGroup>
 
 </Project>

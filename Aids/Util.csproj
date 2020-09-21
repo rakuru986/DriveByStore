@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>DriveByStore..Aids</AssemblyName>
-    <RootNamespace>DriveByStore..Aids</RootNamespace>
+    <AssemblyName>DriveByStore.Util</AssemblyName>
+    <RootNamespace>DriveByStore.Util</RootNamespace>
   </PropertyGroup>
 
 </Project>

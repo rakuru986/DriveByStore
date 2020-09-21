@@ -1,8 +1,8 @@
-﻿using DriveByStore.Data;
+﻿using DriveByStore.Models.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace DriveByStore.Infra
+namespace DriveByStore.Models.Context
 {
     public class StoreDbContext : IdentityDbContext
     {

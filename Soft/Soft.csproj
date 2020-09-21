@@ -38,13 +38,14 @@
     <Compile Remove="Migrations\20200921140243_initial.Designer.cs" />
     <Compile Remove="Migrations\20200921141755_initial.cs" />
     <Compile Remove="Migrations\20200921141755_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200921142737_initial.cs" />
+    <Compile Remove="Migrations\20200921142737_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aids\Aids.csproj" />
-    <ProjectReference Include="..\Facade\Facade.csproj" />
-    <ProjectReference Include="..\Infra\Infra.csproj" />
-    <ProjectReference Include="..\Pages\Pages.csproj" />
+    <ProjectReference Include="..\Aids\Util.csproj" />
+    <ProjectReference Include="..\Facade\Services.csproj" />
+    <ProjectReference Include="..\Pages\ViewModels.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

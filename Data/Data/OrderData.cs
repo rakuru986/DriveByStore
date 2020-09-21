@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DriveByStore.Data
+namespace DriveByStore.Models.Data
 {
     public class OrderData
     {

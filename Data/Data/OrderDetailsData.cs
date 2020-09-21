@@ -1,4 +1,4 @@
-﻿namespace DriveByStore.Data
+﻿namespace DriveByStore.Models.Data
 {
     public class OrderDetailsData
     {

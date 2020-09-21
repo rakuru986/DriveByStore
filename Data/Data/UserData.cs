@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace DriveByStore.Data
+namespace DriveByStore.Models.Data
 {
     public class UserData : IdentityUser 
     {

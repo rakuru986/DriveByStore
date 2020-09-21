@@ -14,9 +14,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Aids\Aids.csproj" />
-    <ProjectReference Include="..\Core\Core.csproj" />
-    <ProjectReference Include="..\Data\Data.csproj" />
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Core\Interfaces.csproj" />
+    <ProjectReference Include="..\Data\Models.csproj" />
+    <ProjectReference Include="..\Domain\Repositories.csproj" />
   </ItemGroup>
 
 </Project>
