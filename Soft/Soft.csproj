@@ -15,8 +15,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +29,15 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200921135428_initial.cs" />
+    <Compile Remove="Migrations\20200921135428_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200921140243_initial.cs" />
+    <Compile Remove="Migrations\20200921140243_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200921141755_initial.cs" />
+    <Compile Remove="Migrations\20200921141755_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,28 +3,28 @@
   <Class Name="DriveByStore.Data.OrderData">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAghAEIAAAAAAACRAAAIA=</HashCode>
+      <HashCode>AAACBAAAAAAAAFAACAAAAAAAAgAFAAAAAEAACAAAAAA=</HashCode>
       <FileName>OrderData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DriveByStore.Data.ProductCategoriesData">
     <Position X="10.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ProductCategoriesData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DriveByStore.Data.ShoppingCartItemData">
+  <Class Name="DriveByStore.Data.OrderDetailsData">
     <Position X="5.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAQAA=</HashCode>
-      <FileName>ShoppingCartItemData.cs</FileName>
+      <HashCode>AAADABAAAAAAAAAAAAAAAAAAAAAEAACAAAAAABAAAAA=</HashCode>
+      <FileName>OrderDetailsData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DriveByStore.Data.UserData">
     <Position X="3" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAIAAAAAAAAAQACAAAAAAAAAAgAAAAAgAAAAAAAAg=</HashCode>
+      <HashCode>AAACAAAAAABAAAAgAAAACAAAAAIAAAAAAAAACgAAAAA=</HashCode>
       <FileName>UserData.cs</FileName>
     </TypeIdentifier>
   </Class>

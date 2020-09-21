@@ -1,19 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DriveByStore.Data
+﻿namespace DriveByStore.Data
 {
     public class ProductData
     {
-        public string productId { get; set; }
-        
-        public string productName { get; set; }
-        public double productPrice { get; set; }
-        public string productImage { get; set; }
-        public double productCategoryId { get; set; }
-        public string productCategoryName { get; set; }
-        public string productStock { get; set; }
-        public string productDescription { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public string Image { get; set; }
+        public double ProductCategoryId { get; set; }
+        public string ProductCategoryName { get; set; }
+        public int Stock { get; set; }
+        public string Description { get; set; }
 
     }
 }

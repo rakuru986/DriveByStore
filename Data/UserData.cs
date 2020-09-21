@@ -1,13 +1,12 @@
-﻿namespace DriveByStore.Data
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace DriveByStore.Data
 {
-    public class UserData
+    public class UserData : IdentityUser 
     {
-        public string userId { get; set; }
-        public string userEmail { get; set; }
-        public string userPassword { get; set; }
-        public string userFirstName { get; set; }
-        public string userLastName { get; set; }
-        public string userAddress { get; set; }
-        public string userCity { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
     }
 }

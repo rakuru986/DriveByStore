@@ -2,7 +2,8 @@
 {
     public class ProductCategoriesData
     {
-        public double categoryId { get; set; }
-        public string categoryName { get; set; }
+        public int Id { get; set; }
+        public double CategoryId { get; set; }
+        public string CategoryName { get; set; }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Aids
+﻿namespace Aids
 {
 	public class Class1
 	{

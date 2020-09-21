@@ -4,15 +4,15 @@ namespace DriveByStore.Data
 {
     public class OrderData
     {
-        public double orderId { get; set; }
-        public double orderUserId { get; set; }
-        public string orderShipAddress { get; set; }
-        public string orderCity { get; set; }
-        public string orderZip { get; set; }
-        public string orderPhone { get; set; }
-        public string orderEmail { get; set; }
-        public DateTime orderShipped { get; set; }
-        public string orderTrackingNumber { get; set; }
-        public double orderTotal { get; set; }
+        public double Id { get; set; }
+        public double UserId { get; set; }
+        public string ShippingAddress { get; set; }
+        public string OrderCity { get; set; }
+        public string OrderZip { get; set; }
+        public string OrderPhone { get; set; }
+        public string OrderEmail { get; set; }
+        public DateTime OrderShippedTime { get; set; }
+        public string TrackingNumber { get; set; }
+        public double Total { get; set; }
     }
 }
