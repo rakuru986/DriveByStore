@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DriveByStore.Data.OrderData">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAghAEIAAAAAAACRAAAIA=</HashCode>
+      <FileName>OrderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DriveByStore.Data.ProductCategoriesData">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductCategoriesData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DriveByStore.Data.ShoppingCartItemData">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAQAA=</HashCode>
+      <FileName>ShoppingCartItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DriveByStore.Data.UserData">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIAAAAAAAAAQACAAAAAAAAAAgAAAAAgAAAAAAAAg=</HashCode>
+      <FileName>UserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -5,9 +5,6 @@ namespace DriveByStore.Data
 {
     public class ProductData
     {
-        //[Required]
-        //[ScaffoldColumn(false)]
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string productId { get; set; }
         
         public string productName { get; set; }

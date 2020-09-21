@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DriveByStore.Infra
 {
-    public class QuantityDbContext : DbContext
+    public class StoreDbContext : DbContext
     {
         public DbSet<OrderData> Orders { get; set; }
         public DbSet<ProductCategoriesData> ProductCategories{ get; set; }
         public DbSet<ProductData> Products{ get; set; }
         public DbSet<ShoppingCartItemData> ShoppingCartItems { get; set; }
         public DbSet<UserData> Users { get; set; }
-        public QuantityDbContext(DbContextOptions<QuantityDbContext> options)
+        public StoreDbContext(DbContextOptions<StoreDbContext> options)
             : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)

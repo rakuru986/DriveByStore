@@ -17,7 +17,7 @@ namespace DriveByStore.Infra
 {
     public static class QuantityDbInitializer
     {
-	    public static void Initialize(QuantityDbContext db)
+	    public static void Initialize(StoreDbContext db)
         {
             InitializeProductData(Products.Club, db);
 
@@ -77,7 +77,7 @@ namespace DriveByStore.Infra
         }
 
         private static void InitializeProductData(CoreProductData product,
-            QuantityDbContext db)
+            StoreDbContext db)
         {
             AddProductData(product, db);
             
@@ -86,7 +86,7 @@ namespace DriveByStore.Infra
         private static T getItem<T>(IQueryable<T> set, string id) where T : ProductData
             => set.FirstOrDefaultAsync(m => m.productId == id).GetAwaiter().GetResult();
 
-        private static void AddProductData(CoreProductData product, QuantityDbContext db)
+        private static void AddProductData(CoreProductData product, StoreDbContext db)
         {
             var o = getItem(db.Products, product.ProductId);
             db.Products.Add(
@@ -104,7 +104,7 @@ namespace DriveByStore.Infra
                 });
         }
         //private static void AddBasketballPlayers(IEnumerable<BBPlayerData> players, string clubId,
-        //    QuantityDbContext db)
+        //    StoreDbContext db)
         //{
         //    foreach (var d in from d in players
         //                      let o = getItem(db.BasketballPlayer, d.Id)
@@ -126,7 +126,7 @@ namespace DriveByStore.Infra
 
 
         //private static void InitializeFBData(FBClubData club, List<FBPlayerData> players,
-        //    QuantityDbContext db)
+        //    StoreDbContext db)
         //{
         //    AddFootballClub(club, db);
         //    db.SaveChanges();
@@ -134,7 +134,7 @@ namespace DriveByStore.Infra
         //    db.SaveChanges();
         //}
 
-        //private static void AddFootballClub(FBClubData club, QuantityDbContext db)
+        //private static void AddFootballClub(FBClubData club, StoreDbContext db)
         //{
         // var o = getItem(db.FootballClub, club.Id);
         //    db.FootballClub.Add(
@@ -148,7 +148,7 @@ namespace DriveByStore.Infra
         //}
 
         //private static void AddFootballPlayers(IEnumerable<FBPlayerData> players, string clubId,
-        //    QuantityDbContext db)
+        //    StoreDbContext db)
         //{
         // foreach (var d in from d in players
         //  let o = getItem(db.FootballPlayer, d.Id)
