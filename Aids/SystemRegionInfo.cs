@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Linq;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class SystemRegionInfo {
 

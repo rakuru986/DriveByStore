@@ -1,4 +1,4 @@
-﻿namespace Projekt.Aids {
+﻿namespace DriveByStore.Util {
     public class IsRunning {
 
         private const string testFramework = "Microsoft.VisualStudio.QualityTools.UnitTestFramework";

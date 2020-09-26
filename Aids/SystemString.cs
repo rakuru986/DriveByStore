@@ -1,6 +1,6 @@
 ﻿
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class SystemString {
 

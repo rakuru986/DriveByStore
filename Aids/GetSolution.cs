@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class GetSolution {
 

@@ -1,4 +1,4 @@
-﻿namespace Aids
+﻿namespace DriveByStore.Util
 {
 	public class Class1
 	{

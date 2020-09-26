@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projekt.Aids.Extensions {
+namespace DriveByStore.Util.Extensions {
 
     public static class Dates {
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class Log {
         internal static ILogBook logBook;

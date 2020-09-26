@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class PublicBindingFlagsFor {
         private const BindingFlags p = BindingFlags.Public;

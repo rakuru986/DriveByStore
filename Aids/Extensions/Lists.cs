@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Projekt.Aids.Extensions {
+namespace DriveByStore.Util.Extensions {
     public static class Lists {
 
         public static IEnumerable<T> OrderBy<T>(IEnumerable<T> list, Func<T, string> func) 

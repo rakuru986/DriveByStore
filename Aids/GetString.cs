@@ -1,5 +1,5 @@
 ﻿
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class GetString {
         public static string Head(string s, char seperator = '.') {

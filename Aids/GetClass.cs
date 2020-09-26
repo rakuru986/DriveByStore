@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
     public static class GetClass {
         private const string g = "get_";
         private const string s = "set_";

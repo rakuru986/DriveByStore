@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public interface ILogBook {
         void WriteEntry(string message);

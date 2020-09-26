@@ -3,7 +3,7 @@
 
 using System.Globalization;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class SystemCultureInfo {
         public static CultureInfo[] GetSpecificCultures() {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
 
     public static class CreateNew {

@@ -5,7 +5,7 @@
 
 using System;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class GetEnum {
         public static int Count<T>() {

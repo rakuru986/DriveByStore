@@ -1,4 +1,4 @@
-﻿namespace Projekt.Aids {
+﻿namespace DriveByStore.Util {
     public static class IsReadOnly {
         public static bool Field<T>(string name) {
             return typeof(T).GetField(name)?.IsInitOnly ?? false;

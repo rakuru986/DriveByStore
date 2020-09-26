@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
 
     public static class GetRandom {
         private static readonly Random r = new Random();

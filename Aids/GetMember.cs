@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
     public class GetMember {
         public static string Name<T>(Expression<Func<T, object>> ex) {
             return Safe.Run(()=>name(ex.Body), string.Empty);

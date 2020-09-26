@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Projekt.Aids {
+namespace DriveByStore.Util {
     public class UseCulture
     {
         public static CultureInfo Current => CultureInfo.CurrentCulture;

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Projekt.Aids.Extensions {
+namespace DriveByStore.Util.Extensions {
 
     public static class Booleans {
 

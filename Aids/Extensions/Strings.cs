@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Linq;
 
-namespace Projekt.Aids.Extensions {
+namespace DriveByStore.Util.Extensions {
 
     public static class Strings {
 
