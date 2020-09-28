@@ -10,7 +10,8 @@ namespace DriveByStore.Models.Context
         public DbSet<ProductCategoriesData> ProductCategories{ get; set; }
         public DbSet<ProductData> Products{ get; set; }
         public DbSet<OrderDetailsData> OrderDetails { get; set; }
-        public new DbSet<UserData> Users { get; set; }
+        public DbSet<UserData> Users { get; set; }
+        public DbSet<InventoryData> Inventory { get; set; }
         public StoreDbContext(DbContextOptions<StoreDbContext> options)
             : base(options) { }
 
@@ -27,6 +28,7 @@ namespace DriveByStore.Models.Context
             builder.Entity<ProductCategoriesData>().ToTable(nameof(ProductCategories));
             builder.Entity<ProductData>().ToTable(nameof(Products));
             builder.Entity<OrderDetailsData>().ToTable(nameof(OrderDetails));
+            builder.Entity<InventoryData>().ToTable(nameof(Inventory));
         }
     }
 }
