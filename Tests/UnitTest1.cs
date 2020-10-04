@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DriveByStore.Tests
+namespace Tests
 {
     [TestClass]
     public class UnitTest1

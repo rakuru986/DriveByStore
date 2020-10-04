@@ -1,0 +1,9 @@
+C:\Users\Artur\source\repos\drivebystore\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.deps.json
+C:\Users\Artur\source\repos\drivebystore\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.dll
+C:\Users\Artur\source\repos\drivebystore\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.pdb
+C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfoInputs.cache
+C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfo.cs
+C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
+C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb
+C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csprojAssemblyReference.cache

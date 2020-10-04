@@ -1,0 +1,9 @@
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Maps.deps.json
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Maps.dll
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Maps.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfoInputs.cache
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfo.cs
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.csproj.CoreCompileInputs.cache
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.dll
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.csprojAssemblyReference.cache

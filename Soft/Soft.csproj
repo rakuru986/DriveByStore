@@ -10,18 +10,17 @@
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
-    <AssemblyName>DriveByStore.Soft</AssemblyName>
-    <RootNamespace>DriveByStore.Soft</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,22 +31,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200921135428_initial.cs" />
-    <Compile Remove="Migrations\20200921135428_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200921140243_initial.cs" />
-    <Compile Remove="Migrations\20200921140243_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200921141755_initial.cs" />
-    <Compile Remove="Migrations\20200921141755_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200921142737_initial.cs" />
-    <Compile Remove="Migrations\20200921142737_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200921151502_initial.cs" />
-    <Compile Remove="Migrations\20200921151502_initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201004184336_initial.cs" />
+    <Compile Remove="Data\Migrations\20201004184336_initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201004184548_initial.cs" />
+    <Compile Remove="Data\Migrations\20201004184548_initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201004190838_initial.cs" />
+    <Compile Remove="Data\Migrations\20201004190838_initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201004193716_initial.cs" />
+    <Compile Remove="Data\Migrations\20201004193716_initial.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201004195057_initial.cs" />
+    <Compile Remove="Data\Migrations\20201004195057_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aids\Util.csproj" />
-    <ProjectReference Include="..\Facade\Services.csproj" />
-    <ProjectReference Include="..\Pages\ViewModels.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
