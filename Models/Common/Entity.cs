@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Interfaces.Common;
+using Models.Common.Interfaces;
 using Models.Data.Common;
 using Util;
 

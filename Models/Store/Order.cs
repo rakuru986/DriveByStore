@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Models.Common;
+﻿using Models.Common;
 using Models.Data;
 
 namespace Models.Store
 {
-    public sealed class Order : Entity<OrderData>
+    public sealed class Order : UniqueEntity<OrderData>
     {
         public Order() : this(null) { }
         public Order(OrderData d) : base(d) { }

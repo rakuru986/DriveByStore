@@ -7,3 +7,11 @@ C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.cspro
 C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.dll
 C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.pdb
 C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.csprojAssemblyReference.cache
+E:\Documents\Programmeerimine\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.deps.json
+E:\Documents\Programmeerimine\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.dll
+E:\Documents\Programmeerimine\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.pdb
+E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.csprojAssemblyReference.cache
+E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfoInputs.cache
+E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfo.cs
+E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.dll
+E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.pdb

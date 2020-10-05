@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Interfaces.Common
+﻿namespace Models.Common.Interfaces
 {
     public interface IRepository<T> : ICrudMethods<T>
     {

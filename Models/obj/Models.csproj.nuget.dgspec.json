@@ -1,78 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Artur\\source\\repos\\drivebystore\\Models\\Models.csproj": {}
+    "E:\\Documents\\Programmeerimine\\DriveByStore\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Artur\\source\\repos\\drivebystore\\Interfaces\\Interfaces.csproj": {
+    "E:\\Documents\\Programmeerimine\\DriveByStore\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Interfaces\\Interfaces.csproj",
-        "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Interfaces\\Interfaces.csproj",
-        "packagesPath": "C:\\Users\\Artur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Interfaces\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Artur\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Artur\\source\\repos\\drivebystore\\Models\\Models.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Models\\Models.csproj",
+        "projectUniqueName": "E:\\Documents\\Programmeerimine\\DriveByStore\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\Artur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Models\\obj\\",
+        "projectPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
+        "outputPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Artur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,11 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Artur\\source\\repos\\drivebystore\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Interfaces\\Interfaces.csproj"
-              },
-              "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\Util.csproj": {
-                "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\Util.csproj"
+              "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\Util.csproj": {
+                "projectPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\Util.csproj"
               }
             }
           }
@@ -131,24 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\Util.csproj": {
+    "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\Util.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\Util.csproj",
+        "projectUniqueName": "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\Util.csproj",
         "projectName": "Util",
-        "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\Util.csproj",
-        "packagesPath": "C:\\Users\\Artur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\obj\\",
+        "projectPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\Util.csproj",
+        "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
+        "outputPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Artur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -186,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

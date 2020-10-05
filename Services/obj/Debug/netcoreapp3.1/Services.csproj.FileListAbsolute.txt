@@ -7,3 +7,11 @@ C:\Users\Artur\source\repos\drivebystore\Services\obj\Debug\netcoreapp3.1\Servic
 C:\Users\Artur\source\repos\drivebystore\Services\obj\Debug\netcoreapp3.1\Services.dll
 C:\Users\Artur\source\repos\drivebystore\Services\obj\Debug\netcoreapp3.1\Services.pdb
 C:\Users\Artur\source\repos\drivebystore\Services\obj\Debug\netcoreapp3.1\Services.csprojAssemblyReference.cache
+E:\Documents\Programmeerimine\DriveByStore\Services\bin\Debug\netcoreapp3.1\Services.deps.json
+E:\Documents\Programmeerimine\DriveByStore\Services\bin\Debug\netcoreapp3.1\Services.dll
+E:\Documents\Programmeerimine\DriveByStore\Services\bin\Debug\netcoreapp3.1\Services.pdb
+E:\Documents\Programmeerimine\DriveByStore\Services\obj\Debug\netcoreapp3.1\Services.csprojAssemblyReference.cache
+E:\Documents\Programmeerimine\DriveByStore\Services\obj\Debug\netcoreapp3.1\Services.AssemblyInfoInputs.cache
+E:\Documents\Programmeerimine\DriveByStore\Services\obj\Debug\netcoreapp3.1\Services.AssemblyInfo.cs
+E:\Documents\Programmeerimine\DriveByStore\Services\obj\Debug\netcoreapp3.1\Services.dll
+E:\Documents\Programmeerimine\DriveByStore\Services\obj\Debug\netcoreapp3.1\Services.pdb

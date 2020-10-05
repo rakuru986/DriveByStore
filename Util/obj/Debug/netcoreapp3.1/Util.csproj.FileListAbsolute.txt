@@ -7,3 +7,10 @@ C:\Users\Artur\source\repos\drivebystore\Util\obj\Debug\netcoreapp3.1\Util.Assem
 C:\Users\Artur\source\repos\drivebystore\Util\obj\Debug\netcoreapp3.1\Util.csproj.CoreCompileInputs.cache
 C:\Users\Artur\source\repos\drivebystore\Util\obj\Debug\netcoreapp3.1\Util.dll
 C:\Users\Artur\source\repos\drivebystore\Util\obj\Debug\netcoreapp3.1\Util.pdb
+E:\Documents\Programmeerimine\DriveByStore\Util\bin\Debug\netcoreapp3.1\Util.deps.json
+E:\Documents\Programmeerimine\DriveByStore\Util\bin\Debug\netcoreapp3.1\Util.dll
+E:\Documents\Programmeerimine\DriveByStore\Util\bin\Debug\netcoreapp3.1\Util.pdb
+E:\Documents\Programmeerimine\DriveByStore\Util\obj\Debug\netcoreapp3.1\Util.AssemblyInfoInputs.cache
+E:\Documents\Programmeerimine\DriveByStore\Util\obj\Debug\netcoreapp3.1\Util.AssemblyInfo.cs
+E:\Documents\Programmeerimine\DriveByStore\Util\obj\Debug\netcoreapp3.1\Util.dll
+E:\Documents\Programmeerimine\DriveByStore\Util\obj\Debug\netcoreapp3.1\Util.pdb

@@ -7,3 +7,11 @@ C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Inte
 C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
 C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb
 C:\Users\Artur\source\repos\drivebystore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csprojAssemblyReference.cache
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.deps.json
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.dll
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.pdb
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csprojAssemblyReference.cache
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfoInputs.cache
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfo.cs
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
+E:\Documents\Programmeerimine\DriveByStore\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb

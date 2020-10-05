@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
-using Interfaces.Common;
 using Microsoft.EntityFrameworkCore;
+using Models.Common.Interfaces;
 using Models.Data.Common;
 using Util;
 
@@ -10,7 +11,7 @@ namespace Repositories.Common
 {
     public abstract class BaseRepository<TModel, TData> : ICrudMethods<TModel>, IRepository
         where TModel : IEntity<TData>
-        where TData : PeriodData
+        where TData : PeriodData, new()
     {
         protected internal DbContext db;
         protected internal DbSet<TData> dbSet;
@@ -45,17 +46,14 @@ namespace Repositories.Common
 
         public async Task<TModel> Get(string id)
         {
-            if (id is null) return unspecifiedEntity();
-            var d = await getData(id);
+            if (id is null) return toModelObject(new TData());
 
-            if (d is null) return unspecifiedEntity();
+            var d = await getData(id);
 
             var obj = toModelObject(d);
 
             return obj;
         }
-
-        public abstract TModel unspecifiedEntity();
 
         protected abstract Task<TData> getData(string id);
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Interfaces.Common;
+﻿using Models.Common.Interfaces;
 
 namespace Models.Store.Interfaces
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Models.Context;
+﻿using Models.Context;
 using Models.Data;
 using Models.Store;
 using Models.Store.Interfaces;
@@ -15,8 +11,6 @@ namespace Repositories
         public ProductRepository() : this(null) { }
         public ProductRepository(StoreDbContext c = null) : base(c, c?.Products) { }
 
-        protected internal override Product toModelObject(ProductData periodData) => new Product();
-
-        public override Product unspecifiedEntity() => new Product();
+        protected internal override Product toModelObject(ProductData d) => new Product(d);
     }
 }

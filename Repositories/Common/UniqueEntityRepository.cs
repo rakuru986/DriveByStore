@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Interfaces.Common;
+﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Models.Common.Interfaces;
 using Models.Data.Common;
 
 namespace Repositories.Common
 {
     public abstract class UniqueEntityRepository<TModel, TData> : BaseRepository<TModel, TData>
         where TModel : IEntity<TData>
-        where TData : UniqueEntityData
+        where TData : UniqueEntityData, new()
     {
         protected UniqueEntityRepository(DbContext context, DbSet<TData> set) : base(context, set) { }
 

@@ -14,3 +14,8 @@ C:\Users\Artur\source\repos\drivebystore\Repositories\bin\Debug\netcoreapp3.1\Ut
 C:\Users\Artur\source\repos\drivebystore\Repositories\bin\Debug\netcoreapp3.1\Models.pdb
 C:\Users\Artur\source\repos\drivebystore\Repositories\bin\Debug\netcoreapp3.1\Util.pdb
 C:\Users\Artur\source\repos\drivebystore\Repositories\obj\Debug\netcoreapp3.1\Repositories.csproj.CoreCompileInputs.cache
+E:\Documents\Programmeerimine\DriveByStore\Repositories\obj\Debug\netcoreapp3.1\Repositories.csprojAssemblyReference.cache
+E:\Documents\Programmeerimine\DriveByStore\Repositories\obj\Debug\netcoreapp3.1\Repositories.AssemblyInfoInputs.cache
+E:\Documents\Programmeerimine\DriveByStore\Repositories\obj\Debug\netcoreapp3.1\Repositories.AssemblyInfo.cs
+E:\Documents\Programmeerimine\DriveByStore\Repositories\obj\Debug\netcoreapp3.1\Repositories.dll
+E:\Documents\Programmeerimine\DriveByStore\Repositories\obj\Debug\netcoreapp3.1\Repositories.pdb
