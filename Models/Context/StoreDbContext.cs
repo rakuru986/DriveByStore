@@ -17,7 +17,6 @@ namespace Models.Context
         {
             base.OnModelCreating(builder);
             InitializeTables(builder);
-            StoreDbInitializer.Initialize(this);
         }
 
         public static void InitializeTables(ModelBuilder builder)

@@ -7,7 +7,10 @@ using Soft.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Models.Context;
 using Models.Data;
+using Models.Store.Interfaces;
+using Repositories;
 
 namespace Soft
 {
@@ -27,6 +30,10 @@ namespace Soft
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDbContext<StoreDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDefaultIdentity<UserData>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -42,6 +49,12 @@ namespace Soft
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddScoped<IInventoryRepository, InventoryRepository>();
+            services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

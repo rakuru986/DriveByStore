@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Models.Context;
 
 namespace Soft
 {
@@ -9,12 +11,12 @@ namespace Soft
         {
             var host = CreateHostBuilder(args).Build();
 
-            //using (var scope = host.Services.CreateScope())
-            //{
-            //    var services = scope.ServiceProvider;
-            //    var context = services.GetRequiredService<StoreDbContext>();
-            //    StoreDbInitializer.Initialize(context);
-            //}
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<StoreDbContext>();
+                StoreDbInitializer.Initialize(context);
+            }
 
             host.Run();
         }

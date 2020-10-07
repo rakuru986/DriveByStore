@@ -31,8 +31,9 @@ namespace Soft.Data.Migrations
                 name: "Inventory",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(nullable: false),
+                    ValidFrom = table.Column<DateTime>(nullable: true),
+                    ValidTo = table.Column<DateTime>(nullable: true),
                     ProductId = table.Column<int>(nullable: false),
                     Stock = table.Column<int>(nullable: false)
                 },
@@ -45,10 +46,11 @@ namespace Soft.Data.Migrations
                 name: "OrderDetails",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OrderId = table.Column<int>(nullable: false),
-                    ProductId = table.Column<int>(nullable: false),
+                    Id = table.Column<string>(nullable: false),
+                    ValidFrom = table.Column<DateTime>(nullable: true),
+                    ValidTo = table.Column<DateTime>(nullable: true),
+                    OrderId = table.Column<string>(nullable: true),
+                    ProductId = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<double>(nullable: false),
                     Quantity = table.Column<int>(nullable: false)
@@ -62,9 +64,10 @@ namespace Soft.Data.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(nullable: false),
+                    Id = table.Column<string>(nullable: false),
+                    ValidFrom = table.Column<DateTime>(nullable: true),
+                    ValidTo = table.Column<DateTime>(nullable: true),
+                    UserId = table.Column<string>(nullable: true),
                     ShippingAddress = table.Column<string>(nullable: true),
                     OrderCity = table.Column<string>(nullable: true),
                     OrderZip = table.Column<string>(nullable: true),
@@ -83,8 +86,9 @@ namespace Soft.Data.Migrations
                 name: "ProductCategories",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(nullable: false),
+                    ValidFrom = table.Column<DateTime>(nullable: true),
+                    ValidTo = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -96,12 +100,13 @@ namespace Soft.Data.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(nullable: false),
+                    ValidFrom = table.Column<DateTime>(nullable: true),
+                    ValidTo = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<double>(nullable: false),
                     Image = table.Column<string>(nullable: true),
-                    ProductCategoryId = table.Column<int>(nullable: false),
+                    ProductCategoryId = table.Column<string>(nullable: true),
                     Stock = table.Column<int>(nullable: false),
                     Description = table.Column<string>(nullable: true)
                 },
