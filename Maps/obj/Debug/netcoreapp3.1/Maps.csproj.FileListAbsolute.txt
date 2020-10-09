@@ -15,3 +15,12 @@ E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.Ass
 E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfo.cs
 E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.dll
 E:\Documents\Programmeerimine\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.pdb
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.deps.json
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.dll
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.pdb
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.csprojAssemblyReference.cache
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.csproj.CoreCompileInputs.cache
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfoInputs.cache
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfo.cs
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.dll
+C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.pdb

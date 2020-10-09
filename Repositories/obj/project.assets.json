@@ -1835,20 +1835,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\artur\\.nuget\\packages\\": {}
+    "C:\\Users\\Kristen\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\Programmeerimine\\DriveByStore\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Repositories\\Repositories.csproj",
-      "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Repositories\\obj\\",
+      "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Repositories\\Repositories.csproj",
+      "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Kristen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -1860,11 +1865,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\Documents\\Programmeerimine\\DriveByStore\\Models\\Models.csproj": {
-              "projectPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Models\\Models.csproj"
+            "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj"
             },
-            "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\Util.csproj": {
-              "projectPath": "E:\\Documents\\Programmeerimine\\DriveByStore\\Util\\Util.csproj"
+            "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj": {
+              "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj"
             }
           }
         }
@@ -1898,7 +1903,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
