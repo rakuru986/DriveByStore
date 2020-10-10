@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj": {}
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj": {
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj",
+        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj",
         "projectName": "Util",
-        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj",
+        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj",
         "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\obj\\",
+        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

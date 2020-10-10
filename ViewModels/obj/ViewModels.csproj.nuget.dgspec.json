@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\ViewModels\\ViewModels.csproj": {}
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\ViewModels\\ViewModels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\ViewModels\\ViewModels.csproj": {
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\ViewModels\\ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\ViewModels\\ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\ViewModels\\ViewModels.csproj",
         "projectName": "ViewModels",
-        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\ViewModels\\ViewModels.csproj",
+        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\ViewModels\\ViewModels.csproj",
         "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\ViewModels\\obj\\",
+        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Maps\\Maps.csproj": {}
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Maps\\Maps.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Maps\\Maps.csproj": {
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Maps\\Maps.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Maps\\Maps.csproj",
+        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Maps\\Maps.csproj",
         "projectName": "Maps",
-        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Maps\\Maps.csproj",
+        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Maps\\Maps.csproj",
         "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Maps\\obj\\",
+        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Maps\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

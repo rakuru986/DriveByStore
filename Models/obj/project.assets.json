@@ -1821,11 +1821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj",
+      "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\obj\\",
+      "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1845,8 +1845,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj": {
-              "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj"
+            "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj": {
+              "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj"
             }
           }
         }

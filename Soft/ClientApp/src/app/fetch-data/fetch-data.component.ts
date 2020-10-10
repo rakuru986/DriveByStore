@@ -14,10 +14,7 @@ export class FetchDataComponent {
       summary: "123",
       temperatureC: 123,
       temperatureF: 123
-    },
-    {
-
-    },
+    }   
 
   ]
 
