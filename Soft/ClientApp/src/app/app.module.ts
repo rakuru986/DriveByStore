@@ -18,6 +18,7 @@ import { BicyclesComponent } from './bicycles/bicycles.component';
 import { SkateboardsComponent } from './skateboards/skateboards.component';
 import { ScootersComponent } from './scooters/scooters.component';
 import { ToolsComponent } from './tools/tools.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ToolsComponent } from './tools/tools.component';
     BicyclesComponent,
     SkateboardsComponent,
     ScootersComponent,
-    ToolsComponent
+    ToolsComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -56,3 +58,5 @@ import { ToolsComponent } from './tools/tools.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
