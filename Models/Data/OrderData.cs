@@ -6,6 +6,7 @@ namespace Models.Data
     public class OrderData : UniqueEntityData
     {
         public string UserId { get; set; }
+        public UserData User { get; set; }
         public string ShippingAddress { get; set; }
         public string OrderCity { get; set; }
         public string OrderZip { get; set; }

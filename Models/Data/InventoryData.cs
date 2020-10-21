@@ -4,7 +4,8 @@ namespace Models.Data
 {
     public class InventoryData : UniqueEntityData
     {
-        public int ProductId { get; set; }
+        public string ProductId { get; set; }
+        public ProductData Product { get; set; }
         public int Stock { get; set; }
     }
 }

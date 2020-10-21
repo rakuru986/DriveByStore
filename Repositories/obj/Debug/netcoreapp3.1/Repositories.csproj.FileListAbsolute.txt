@@ -6,8 +6,6 @@ C:\Users\Artur\source\repos\drivebystore\Repositories\obj\Debug\netcoreapp3.1\Re
 C:\Users\Artur\source\repos\drivebystore\Repositories\obj\Debug\netcoreapp3.1\Repositories.dll
 C:\Users\Artur\source\repos\drivebystore\Repositories\obj\Debug\netcoreapp3.1\Repositories.pdb
 C:\Users\Artur\source\repos\drivebystore\Repositories\obj\Debug\netcoreapp3.1\Repositories.csprojAssemblyReference.cache
-C:\Users\Artur\source\repos\drivebystore\Repositories\bin\Debug\netcoreapp3.1\Interfaces.dll
-C:\Users\Artur\source\repos\drivebystore\Repositories\bin\Debug\netcoreapp3.1\Interfaces.pdb
 C:\Users\Artur\source\repos\drivebystore\Repositories\obj\Debug\netcoreapp3.1\Repositories.csproj.CopyComplete
 C:\Users\Artur\source\repos\drivebystore\Repositories\bin\Debug\netcoreapp3.1\Models.dll
 C:\Users\Artur\source\repos\drivebystore\Repositories\bin\Debug\netcoreapp3.1\Util.dll
