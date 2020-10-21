@@ -6,7 +6,6 @@ C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.Assem
 C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.csproj.CoreCompileInputs.cache
 C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.dll
 C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.pdb
-C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.csprojAssemblyReference.cache
 E:\Documents\Programmeerimine\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.deps.json
 E:\Documents\Programmeerimine\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.dll
 E:\Documents\Programmeerimine\DriveByStore\Maps\bin\Debug\netcoreapp3.1\Maps.pdb

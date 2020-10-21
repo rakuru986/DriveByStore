@@ -22,10 +22,22 @@ namespace Models.Context
         public static void InitializeTables(ModelBuilder builder)
         {
             if (builder is null) return;
+            builder.Entity<InventoryData>()
+                .HasOne(c => c.Product)
+                .WithMany()
+                .HasForeignKey(c => c.ProductId);
             builder.Entity<InventoryData>().ToTable(nameof(Inventory));
+
             builder.Entity<OrderData>().ToTable(nameof(Orders));
+
+            builder.Entity<OrderDetailsData>().HasOne(c => c.Order).WithMany().HasForeignKey(c => c.OrderId);
+            builder.Entity<OrderDetailsData>().HasOne(c => c.Product).WithMany().HasForeignKey(c => c.ProductId);
             builder.Entity<OrderDetailsData>().ToTable(nameof(OrderDetails));
+
             builder.Entity<ProductCategoriesData>().ToTable(nameof(ProductCategories));
+
+            builder.Entity<ProductData>().HasOne(c => c.ProductCategory).WithMany()
+                .HasForeignKey(c => c.ProductCategoryId);
             builder.Entity<ProductData>().ToTable(nameof(Products));
 
         }
