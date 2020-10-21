@@ -1,20 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Tests\\Tests.csproj": {}
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Tests\\Tests.csproj": {
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Tests\\Tests.csproj",
+        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Kristen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -74,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

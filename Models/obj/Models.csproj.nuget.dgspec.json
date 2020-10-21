@@ -1,20 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\Models.csproj": {}
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\Models.csproj": {
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Models\\obj\\",
+        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Kristen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -31,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj": {
-                "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj"
+              "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj": {
+                "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj"
               }
             }
           }
@@ -74,21 +75,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj": {
+    "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj",
+        "projectUniqueName": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj",
         "projectName": "Util",
-        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\Util.csproj",
+        "projectPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\Util.csproj",
         "packagesPath": "C:\\Users\\Kristen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\drivebystore\\Util\\obj\\",
+        "outputPath": "C:\\Users\\Kristen\\Source\\Repos\\rakuru986\\DriveByStore\\Util\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Kristen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -130,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
