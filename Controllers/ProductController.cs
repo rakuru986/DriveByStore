@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
+using Maps;
 using Microsoft.AspNetCore.Mvc;
 using Models.Data;
 using Models.Store;
+using ViewModels;
 
 namespace Controllers
 {
@@ -27,10 +29,13 @@ namespace Controllers
             return Json(products);
         }
 
-        // product/GetString
-        public string GetString()
+        public JsonResult SaveProduct(ProductViewModel product)
         {
-            return "Response from controller.";
+
+            ProductsMapper mapper = new ProductsMapper();
+            Product productItem = mapper.mapProducts(product);
+
+            return Json()
         }
     }
 }
