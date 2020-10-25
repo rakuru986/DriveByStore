@@ -6,7 +6,7 @@
     <li class="list-group-item" *ngFor="let item of cartItems">
         <app-cart-item [cartItem]="item"></app-cart-item>
         <button class="btn-sm remove-button"
-        (click)="removeProductFromCart()"
+        (click)="handleRemoveProductFromCart()"
         >Remove item
         </button>
     </li>

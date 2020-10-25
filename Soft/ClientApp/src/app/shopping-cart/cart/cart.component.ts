@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { MessengerService } from 'src/app/services/messenger.service'
 import { Product } from 'src/app/models/product.model';
 
@@ -10,6 +10,8 @@ import { Product } from 'src/app/models/product.model';
 
 export class CartComponent implements OnInit{    
 
+    //@Input() productItem: Product
+
     cartItems = [];
 
     cartTotal = 0
@@ -19,8 +21,16 @@ export class CartComponent implements OnInit{
     ngOnInit(){
         this.msg.getMsg().subscribe((product: Product)=>{
             //console.log(product)
-            this.addProductToCart(product)            
+            this.addProductToCart(product)                                    
         })        
+    }    
+
+    handleRemoveProductFromCart(product: Product){
+        //this.msg.sendMsg(this.productItem)
+
+        let index = this.cartItems.indexOf(product, 0)
+
+        this.cartItems.slice(index,1)
     }
 
     addProductToCart(product: Product){
@@ -48,12 +58,18 @@ export class CartComponent implements OnInit{
 
     removeProductFromCart(product: Product){        
         
-        for(let i in this.cartItems){
-            if(this.cartItems.length === 1){
-                if(this.cartItems[i].qty === 1){
-                    this.cartItems = [];
-                    break;
-                }                
+        // for(let i in this.cartItems){
+        //     if(this.cartItems.length === 1){
+        //         if(this.cartItems[i].qty === 1){
+        //             this.cartItems = [];
+        //             break;
+        //         }    
+                //this.cartItems.find(x=>x.productId == i).p
+                
+
+            let index = this.cartItems.indexOf(product.id, 0)
+
+            this.cartItems.slice(index,1)
                 ///console.log("sss")
 
                 // if(this.cartItems[i].qty === 1){
@@ -62,8 +78,8 @@ export class CartComponent implements OnInit{
                 // }       
                          
                 // this.cartItems[i].qty--                
-            }  
-        }
+        //     }  
+        // }
         this.calculateCartTotal();               
     }
 
