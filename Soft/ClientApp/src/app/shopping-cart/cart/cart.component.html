@@ -3,10 +3,10 @@
 </div>
 
 <ul *ngIf="cartItems.length > 0" class="list-group">
-    <li class="list-group-item" *ngFor="let item of cartItems">
+    <li class="list-group-item" *ngFor="let item of cartItems; let i = index">
         <app-cart-item [cartItem]="item"></app-cart-item>
         <button class="btn-sm remove-button"
-        (click)="handleRemoveProductFromCart()"
+        (click)="removeProductFromCart(item, i)"
         >Remove item
         </button>
     </li>
