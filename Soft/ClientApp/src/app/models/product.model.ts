@@ -1,18 +1,21 @@
-export class Product{
-    productType: number;
+export class Product{    
     id: number;
+    description: string;
     name: string;
-    manufactorer: string;
+    //manufactorer: string;
     price: number;
+    productCategoryId: number;
+    stock: number;
     image: string;
-    description: string;  
+      
 
-    constructor(productType, id, name, manufactorer, price = 0, image = "assets/images/noimageavailable.jpg", description = "No description") {
-      this.productType = productType
+    constructor(productType, id, name, manufactorer, price = 0, productCategoryId, image = "assets/images/noimageavailable.jpg", description = "No description") {
+      //this.productType = productType
       this.id = id
       this.name = name
-      this.manufactorer = manufactorer
+      //this.manufactorer = manufactorer
       this.price = price
+      this.productCategoryId = productCategoryId
       this.image = image
       this.description = description
     }
