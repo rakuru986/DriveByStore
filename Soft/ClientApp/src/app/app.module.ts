@@ -5,7 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -18,6 +18,13 @@ import { BicyclesComponent } from './bicycles/bicycles.component';
 import { SkateboardsComponent } from './skateboards/skateboards.component';
 import { ScootersComponent } from './scooters/scooters.component';
 import { ToolsComponent } from './tools/tools.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { CartComponent } from './shopping-cart/cart/cart.component';
+import { FiltersComponent } from './shopping-cart/filters/filters.component';
+import { ProductListComponent } from './shopping-cart/product-list/product-list.component';
+import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.component';
+import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { ToolsComponent } from './tools/tools.component';
     BicyclesComponent,
     SkateboardsComponent,
     ScootersComponent,
-    ToolsComponent
+    ToolsComponent,
+    ShoppingCartComponent,
+    FooterComponent,
+    CartComponent,
+    FiltersComponent,
+    ProductListComponent,
+    CartItemComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -56,3 +70,5 @@ import { ToolsComponent } from './tools/tools.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

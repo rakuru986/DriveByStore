@@ -1,1 +1,9 @@
-<h1>Cars</h1>
+<h1>CARS =)</h1>
+
+<div *ngFor="let car of cars">    
+    <p>{{ car.name }}</p>
+    <p>{{ car.manufactorer }}</p>
+    <p>{{ car.price }}</p>
+    <p>{{ car.description }}</p>    
+    <img src="{{car.image}}" height="200">    
+</div>
