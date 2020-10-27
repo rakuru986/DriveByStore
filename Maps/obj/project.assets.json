@@ -716,6 +716,35 @@
           "bin/placeholder/Models.dll": {}
         }
       },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.8",
+          "Models": "1.0.0",
+          "Util": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Models": "1.0.0",
+          "Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
+      },
       "Util/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1831,6 +1860,16 @@
       "path": "../Models/Models.csproj",
       "msbuildProject": "../Models/Models.csproj"
     },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
+    },
     "Util/1.0.0": {
       "type": "project",
       "path": "../Util/Util.csproj",
@@ -1845,6 +1884,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Models >= 1.0.0",
+      "Services >= 1.0.0",
       "Util >= 1.0.0",
       "ViewModels >= 1.0.0"
     ]
@@ -1881,6 +1921,9 @@
           "projectReferences": {
             "C:\\Users\\Artur\\source\\repos\\drivebystore\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Models\\Models.csproj"
+            },
+            "C:\\Users\\Artur\\source\\repos\\drivebystore\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Services\\Services.csproj"
             },
             "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\Util.csproj": {
               "projectPath": "C:\\Users\\Artur\\source\\repos\\drivebystore\\Util\\Util.csproj"

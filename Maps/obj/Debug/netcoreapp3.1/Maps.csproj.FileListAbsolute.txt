@@ -23,3 +23,15 @@ C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.
 C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.AssemblyInfo.cs
 C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.dll
 C:\Users\Kristen\Source\Repos\rakuru986\DriveByStore\Maps\obj\Debug\netcoreapp3.1\Maps.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Repositories.dll
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Services.dll
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Util.dll
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Services.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Util.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\bin\Debug\netcoreapp3.1\Repositories.pdb
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.csprojAssemblyReference.cache
+C:\Users\Artur\source\repos\drivebystore\Maps\obj\Debug\netcoreapp3.1\Maps.csproj.CopyComplete
