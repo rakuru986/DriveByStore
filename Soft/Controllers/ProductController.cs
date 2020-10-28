@@ -26,12 +26,13 @@ namespace Soft.Controllers
             return Json(products);
         }
 
-        public JsonResult SaveProduct(ProductViewModel product)
+        public JsonResult SaveProduct([FromBody]ProductViewModel product)
         {
             try
             {
                 ProductsMapper mapper = new ProductsMapper();
                 Product productItem = mapper.mapProducts(product);
+                productRepository.Add(productItem);
                 return Json("Successful!");
             }
             catch (Exception ex)
