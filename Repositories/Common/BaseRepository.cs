@@ -40,7 +40,6 @@ namespace Repositories.Common
         protected internal virtual IQueryable<TData> createSqlQuery()
         {
             var query = from s in dbSet select s;
-
             return query;
         }
 

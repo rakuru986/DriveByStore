@@ -1,4 +1,5 @@
 ﻿using Models.Data.Common;
+using Models.Store;
 
 namespace Models.Data
 {

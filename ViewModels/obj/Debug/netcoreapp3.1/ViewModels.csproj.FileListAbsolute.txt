@@ -14,4 +14,3 @@ E:\Documents\Programmeerimine\DriveByStore\ViewModels\obj\Debug\netcoreapp3.1\Vi
 E:\Documents\Programmeerimine\DriveByStore\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
 E:\Documents\Programmeerimine\DriveByStore\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
 E:\Documents\Programmeerimine\DriveByStore\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
-C:\Users\Artur\source\repos\drivebystore\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache

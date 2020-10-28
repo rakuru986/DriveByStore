@@ -1,4 +1,5 @@
-﻿using Models.Common;
+﻿using System.ComponentModel.DataAnnotations;
+using Models.Common;
 using Models.Data;
 
 namespace Models.Store

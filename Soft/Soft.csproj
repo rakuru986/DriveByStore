@@ -45,17 +45,19 @@
     <Compile Remove="Data\Migrations\20201004201350_initial.Designer.cs" />
     <Compile Remove="Migrations\20201021091842_initial.cs" />
     <Compile Remove="Migrations\20201021091842_initial.Designer.cs" />
+    <Compile Remove="Migrations\20201027000705_initial.cs" />
+    <Compile Remove="Migrations\20201027000705_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Controllers\Controllers.csproj" />
+    <ProjectReference Include="..\Maps\Maps.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
+    <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
