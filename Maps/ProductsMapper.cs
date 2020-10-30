@@ -10,15 +10,15 @@ namespace Maps
     {
         public Product mapProducts(ProductViewModel product)
         {
-            Product productItem = new Product(new ProductData());
-            productItem.Data.Name = product.name;
-            productItem.Data.Description = product.description;
-            productItem.Data.Image = product.image;
-            productItem.Data.Price = product.price;
-            productItem.Data.Stock = product.stock;
-            ProductService service = new ProductService();
-            service.modifyProduct(productItem);
-            return productItem;
+            ProductData productItem = new ProductData
+            {
+                Name = product.name,
+                Description = product.description,
+                Image = product.image,
+                Price = product.price,
+                Stock = product.stock
+        };
+            return new Product(productItem);
         }
     }
 }
