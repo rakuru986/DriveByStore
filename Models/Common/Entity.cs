@@ -1,5 +1,4 @@
-﻿using System;
-using Models.Common.Interfaces;
+﻿using Models.Common.Interfaces;
 using Models.Data.Common;
 using Util;
 

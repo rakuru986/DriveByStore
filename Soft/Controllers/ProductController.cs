@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Maps;
 using Microsoft.AspNetCore.Mvc;
-using Models.Store;
 using Models.Store.Interfaces;
 using Services;
 using Util;
@@ -19,21 +18,19 @@ namespace Soft.Controllers
         }
 
         // product/GetAllProducts
-        public JsonResult GetAllProducts()
+        [HttpGet]
+        public async  Task<IActionResult> GetAllProducts()
         {
-            var products = productRepository.Get().Result;
-            return Json(products);
+            var products = await productRepository.Get();
+            return products == null ? Json(BadRequest("No products found")) : Json(Ok(products));
         }
 
         [HttpPost]
         public async Task<IActionResult> SaveProduct([FromBody]SaveProductViewModel product)
         {
-            if (product == null)
-            {
-                return Json(BadRequest());
-            }
-            ProductsMapper mapper = new ProductsMapper();
-            Product productItem = mapper.mapSaveProduct(product);
+            if (product == null) return Json(BadRequest());
+            var mapper = new ProductsMapper();
+            var productItem = mapper.mapSaveProduct(product);
             await productRepository.Add(productItem);
             return Json(Ok(productItem));
         }
@@ -41,7 +38,8 @@ namespace Soft.Controllers
         [HttpPost]
         public async Task<IActionResult> ReduceStock([FromBody] ChangeStockViewModel item)
         {
-            if (item.mode != Constants.ADD && item.mode != Constants.REDUCE) { return Json(BadRequest("Invalid mode")); }
+            if (item == null) return Json(BadRequest());
+            if (item.mode != Constants.ADD && item.mode != Constants.REDUCE) return Json(BadRequest("Invalid mode"));
 
             var product = await productRepository.Get(item.productId);
 
