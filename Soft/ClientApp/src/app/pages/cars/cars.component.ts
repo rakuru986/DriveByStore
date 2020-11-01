@@ -1,8 +1,14 @@
-import { Component } from '@angular/core';
-import { Product } from '../models/product.model';
+import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product.model';
+import { ProductService } from 'src/app/services/product.service'
+
 
 @Component({ templateUrl: 'cars.component.html' })
-export class CarsComponent {
+export class CarsComponent implements OnInit{
+
+    ngOnInit(){
+        
+    }
     /*car1: Products = {
         id: 1,
         productType: 1,

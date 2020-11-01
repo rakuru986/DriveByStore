@@ -6,18 +6,18 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
-import { CarsComponent } from './cars/cars.component';
-import { MotorcyclesComponent } from './motorcycles/motorcycles.component';
-import { BicyclesComponent } from './bicycles/bicycles.component';
-import { SkateboardsComponent } from './skateboards/skateboards.component';
-import { ScootersComponent } from './scooters/scooters.component';
-import { ToolsComponent } from './tools/tools.component';
+import { CarsComponent } from './pages/cars/cars.component';
+import { MotorcyclesComponent } from './pages/motorcycles/motorcycles.component';
+import { BicyclesComponent } from './pages/bicycles/bicycles.component';
+import { SkateboardsComponent } from './pages/skateboards/skateboards.component';
+import { ScootersComponent } from './pages/scooters/scooters.component';
+import { ToolsComponent } from './pages/tools/tools.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CartComponent } from './shopping-cart/cart/cart.component';
@@ -25,6 +25,7 @@ import { FiltersComponent } from './shopping-cart/filters/filters.component';
 import { ProductListComponent } from './shopping-cart/product-list/product-list.component';
 import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
+
 
 @NgModule({
   declarations: [
