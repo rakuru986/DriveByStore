@@ -10,7 +10,7 @@ using Soft.Data;
 namespace Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201027000705_initial")]
+    [Migration("20201101114349_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -249,12 +249,6 @@ namespace Soft.Migrations
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
@@ -294,12 +288,6 @@ namespace Soft.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
@@ -327,12 +315,6 @@ namespace Soft.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
@@ -349,12 +331,6 @@ namespace Soft.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -383,12 +359,6 @@ namespace Soft.Migrations
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
-
-                    b.Property<DateTime?>("ValidFrom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("ValidTo")
-                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

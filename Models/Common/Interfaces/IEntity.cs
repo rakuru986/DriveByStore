@@ -2,12 +2,7 @@
 
 namespace Models.Common.Interfaces
 {
-    public interface IEntity
-    {
-        DateTime ValidFrom { get; }
-        DateTime ValidTo { get; }
-        bool IsUnspecified { get; }
-    }
+    public interface IEntity { }
 
     public interface IEntity<out TData> : IEntity
     {

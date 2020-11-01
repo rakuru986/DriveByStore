@@ -5,7 +5,7 @@ using Util;
 
 namespace Models.Common
 {
-    public abstract class Entity<TData> : BaseEntity, IEntity<TData> where TData : PeriodData, new()
+    public abstract class Entity<TData> : IEntity<TData> where TData : UniqueEntityData, new()
     {
         protected readonly TData data;
         protected internal Entity(TData d = null) => data = d;
@@ -21,10 +21,5 @@ namespace Models.Common
                 return d;
             }
         }
-
-        public virtual DateTime ValidFrom => Data?.ValidFrom ?? DateTime.MinValue;
-        public virtual DateTime ValidTo => Data?.ValidTo ?? DateTime.MaxValue;
-
-        public bool IsUnspecified => data is null;
     }
 }

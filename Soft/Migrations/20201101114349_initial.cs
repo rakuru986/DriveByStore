@@ -89,8 +89,6 @@ namespace Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -209,8 +207,6 @@ namespace Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
                     UserId = table.Column<string>(nullable: true),
                     ShippingAddress = table.Column<string>(nullable: true),
                     OrderCity = table.Column<string>(nullable: true),
@@ -237,8 +233,6 @@ namespace Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Price = table.Column<double>(nullable: false),
                     Image = table.Column<string>(nullable: true),
@@ -262,8 +256,6 @@ namespace Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
                     ProductId = table.Column<string>(nullable: true),
                     Stock = table.Column<int>(nullable: false)
                 },
@@ -283,8 +275,6 @@ namespace Soft.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    ValidFrom = table.Column<DateTime>(nullable: true),
-                    ValidTo = table.Column<DateTime>(nullable: true),
                     OrderId = table.Column<string>(nullable: true),
                     ProductId = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),

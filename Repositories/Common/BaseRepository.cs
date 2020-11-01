@@ -10,7 +10,7 @@ namespace Repositories.Common
 {
     public abstract class BaseRepository<TModel, TData> : ICrudMethods<TModel>, IRepository
         where TModel : IEntity<TData>
-        where TData : PeriodData, new()
+        where TData : UniqueEntityData, new()
     {
         protected internal DbContext db;
         protected internal DbSet<TData> dbSet;
@@ -31,7 +31,7 @@ namespace Repositories.Common
 
         internal List<TModel> toModelObjectsList(List<TData> set) => set.Select(toModelObject).ToList();
 
-        protected internal abstract TModel toModelObject(TData periodData);
+        protected internal abstract TModel toModelObject(TData uniqueEntityData);
 
         internal async Task<List<TData>> runSqlQueryAsync(IQueryable<TData> query) =>
             await query.AsNoTracking().ToListAsync();

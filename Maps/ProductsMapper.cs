@@ -6,7 +6,7 @@ namespace Maps
 {
     public class ProductsMapper
     {
-        public Product mapProducts(ProductViewModel product)
+        public Product mapSaveProduct(SaveProductViewModel product)
         {
             ProductData productItem = new ProductData
             {
