@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Abc.Data.Common;
-using Abc.Domain.Common;
+using Models.Common;
+using Models.Data.Common;
 
 namespace Abc.Tests
 {

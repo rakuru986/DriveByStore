@@ -12,19 +12,19 @@ namespace Repositories
 {
     public sealed class ProductRepository : UniqueEntityRepository<Product, ProductData>, IProductRepository
     {
-        private StoreDbContext db;
+        private readonly StoreDbContext dbc;
         public ProductRepository() : this(null) { }
 
         public ProductRepository(StoreDbContext c = null) : base(c, c?.Products)
         {
-            db = c;
+            dbc = c;
         }
 
         protected internal override Product toModelObject(ProductData d) => new Product(d);
 
         protected internal override IQueryable<ProductData> createSqlQuery()
         {
-            return db.Products.Include(c => c.ProductCategory);
+            return dbc.Products.Include(c => c.ProductCategory);
         }
     }
 }

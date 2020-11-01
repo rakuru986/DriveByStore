@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Abc.Aids;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Abc.Tests
@@ -17,8 +16,8 @@ namespace Abc.Tests
         public void isTested()
         {
             if (type == null) Assert.Inconclusive(notSpecified);
-            var m = GetClass.Members(type, PublicBindingFlagsFor.DeclaredMembers);
-            members = m.Select(e => e.Name).ToList();
+            //var m = GetClass.Members(type, PublicBindingFlagsFor.DeclaredMembers);
+            //members = m.Select(e => e.Name).ToList();
             removeTested();
             if (members.Count == 0) return;
             Assert.Fail(notTested, members[0]);
