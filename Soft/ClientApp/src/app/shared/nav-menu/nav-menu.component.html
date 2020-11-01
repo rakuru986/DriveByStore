@@ -18,7 +18,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
-        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+        class="navbar-collapse collapse d-sm-inline-flex  flex-sm-row-reverse"
         [ngClass]="{ show: isExpanded }"
       >
         <app-login-menu></app-login-menu>
@@ -33,11 +33,11 @@
           
           </li>
           <div class="dropdown">
-            <button class="dropbtn">Shop</button>
+            <button class="dropbtn nav-link text-dark border-0 bg-transparent">Shop</button>
             <div class="dropdown-content">
-              <a [routerLink]="['/cars']" >Cars</a>
+              <a [routerLink]="['/cars']">Cars</a>
               <a [routerLink]="['/motorcycles']">Motorcycles</a>
-              <a [routerLink]="['/Bicycles']">Bicycles</a>
+              <a [routerLink]="['/bicycles']">Bicycles</a>
               <a [routerLink]="['/scooters']">Scooters</a>
               <a [routerLink]="['/skateboards']">Skateboards</a>
               <a [routerLink]="['/tools']">Tools</a>
