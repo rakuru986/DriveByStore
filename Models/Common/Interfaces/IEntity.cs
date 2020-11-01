@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Models.Common.Interfaces
+﻿namespace Models.Common.Interfaces
 {
     public interface IEntity { }
 
