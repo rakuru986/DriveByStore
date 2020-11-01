@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Threading.Tasks;
 using Maps;
 using Microsoft.AspNetCore.Mvc;
-using Models.Data;
 using Models.Store;
 using Models.Store.Interfaces;
 using ViewModels;
@@ -18,7 +16,6 @@ namespace Soft.Controllers
             productRepository = p;
         }
 
-        // [Route("api/products")]
         // product/GetAllProducts
         public JsonResult GetAllProducts()
         {
@@ -26,20 +23,17 @@ namespace Soft.Controllers
             return Json(products);
         }
 
-        public JsonResult SaveProduct([FromBody]ProductViewModel product)
+        [HttpPost]
+        public async Task<IActionResult> SaveProduct([FromBody]ProductViewModel product)
         {
-            try
+            if (product == null)
             {
-                ProductsMapper mapper = new ProductsMapper();
-                Product productItem = mapper.mapProducts(product);
-                productRepository.Add(productItem);
-                return Json("Successful!");
+                return Json(BadRequest());
             }
-            catch (Exception ex)
-            {
-                return Json(ex.Message);
-            }
-
+            ProductsMapper mapper = new ProductsMapper();
+            Product productItem = mapper.mapProducts(product);
+            await productRepository.Add(productItem);
+            return Json(Ok(productItem));
         }
     }
 }

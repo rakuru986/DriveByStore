@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-using Models.Context;
-using Models.Store;
+﻿using Models.Store;
 using Repositories;
 
 namespace Services
