@@ -9,9 +9,6 @@ import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
-import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
-import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
 import { CarsComponent } from './pages/cars/cars.component';
 import { MotorcyclesComponent } from './pages/motorcycles/motorcycles.component';
 import { BicyclesComponent } from './pages/bicycles/bicycles.component';
@@ -52,11 +49,10 @@ import { ProductItemComponent } from './shopping-cart/product-list/product-item/
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    ApiAuthorizationModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
+      { path: 'fetch-data', component: FetchDataComponent },
       { path: 'cars', component: CarsComponent },
       { path: 'motorcycles', component: MotorcyclesComponent },
       { path: 'bicycles', component: BicyclesComponent },
@@ -66,7 +62,6 @@ import { ProductItemComponent } from './shopping-cart/product-list/product-item/
     ])
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
