@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+//import { AppRoutingModule } from './app-routing.module'
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
@@ -22,6 +23,8 @@ import { FiltersComponent } from './shopping-cart/filters/filters.component';
 import { ProductListComponent } from './shopping-cart/product-list/product-list.component';
 import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -43,7 +46,9 @@ import { ProductItemComponent } from './shopping-cart/product-list/product-item/
     FiltersComponent,
     ProductListComponent,
     CartItemComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -51,14 +56,15 @@ import { ProductItemComponent } from './shopping-cart/product-list/product-item/
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent },
       { path: 'cars', component: CarsComponent },
       { path: 'motorcycles', component: MotorcyclesComponent },
       { path: 'bicycles', component: BicyclesComponent },
       { path: 'skateboards', component: SkateboardsComponent },
       { path: 'scooters', component: ScootersComponent },
-      { path: 'tools', component: ToolsComponent}
+      { path: 'tools', component: ToolsComponent},
+
     ])
   ],
   providers: [
