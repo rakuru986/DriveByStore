@@ -8,8 +8,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CarsComponent } from './pages/cars/cars.component';
 import { MotorcyclesComponent } from './pages/motorcycles/motorcycles.component';
 import { BicyclesComponent } from './pages/bicycles/bicycles.component';
@@ -32,8 +30,6 @@ import { RegisterComponent } from './components/register/register.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     CarsComponent,
     MotorcyclesComponent,
     BicyclesComponent,
