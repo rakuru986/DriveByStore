@@ -8,15 +8,12 @@ using Models.Data;
 
 namespace Soft.Data
 {
-    public class ApplicationDbContext : ApiAuthorizationDbContext<UserData>
+    public class ApplicationDbContext : DbContext
     {
-        private readonly IHttpContextAccessor httpContextAccessor;
+        
         public ApplicationDbContext(
-            DbContextOptions options,
-            IOptions<OperationalStoreOptions> operationalStoreOptions, IHttpContextAccessor hca) : base(options, operationalStoreOptions)
-        {
-            httpContextAccessor = hca;
-        }
+            DbContextOptions<ApplicationDbContext> options)
+             : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

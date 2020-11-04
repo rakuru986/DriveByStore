@@ -10,6 +10,7 @@ namespace Models.Context
         public DbSet<OrderDetailsData> OrderDetails { get; set; }
         public DbSet<ProductCategoriesData> ProductCategories { get; set; }
         public DbSet<ProductData> Products { get; set; }
+        public DbSet<UserData> Users { get; set; }
 
         public StoreDbContext(DbContextOptions<StoreDbContext> options) : base(options) { }
 
@@ -39,6 +40,7 @@ namespace Models.Context
             builder.Entity<ProductData>().HasOne(c => c.ProductCategory).WithMany()
                 .HasForeignKey(c => c.ProductCategoryId);
             builder.Entity<ProductData>().ToTable(nameof(Products));
+            builder.Entity<UserData>().ToTable(nameof(Users));
 
         }
     }
