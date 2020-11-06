@@ -26,8 +26,8 @@ import { FiltersComponent } from './components/shopping-cart/filters/filters.com
 import { ProductListComponent } from './components/shopping-cart/product-list/product-list.component';
 import { CartItemComponent } from './components/shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
-import { LoginComponent } from './account/login/login.component';
-import { RegisterComponent } from './account/register/register.component';
+//import { LoginComponent } from './account/login/login.component';
+//import { RegisterComponent } from './account/register/register.component';
 import { AlertComponent } from './components/alert/alert.component';
 
 import { AddEditComponent } from './users/add-edit/add-edit.component';
@@ -52,11 +52,11 @@ import { ListComponent } from './users/list/list.component';
     ProductListComponent,
     CartItemComponent,
     ProductItemComponent,
-    LoginComponent,
-    RegisterComponent,
+    //LoginComponent,
+    //RegisterComponent,
     AlertComponent,    
-    AddEditComponent,
-    ListComponent
+    // AddEditComponent,
+    // ListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -65,8 +65,8 @@ import { ListComponent } from './users/list/list.component';
     AppRoutingModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'register', component: RegisterComponent },
-      { path: 'login', component: LoginComponent },
+      //{ path: 'register', component: RegisterComponent },
+      //{ path: 'login', component: LoginComponent },
       { path: 'cars', component: CarsComponent },
       { path: 'motorcycles', component: MotorcyclesComponent },
       { path: 'bicycles', component: BicyclesComponent },
