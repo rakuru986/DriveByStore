@@ -28,11 +28,12 @@ namespace Soft.Controllers
             return Json(Ok(userItem));
         }
 
-        [HttpPost]
-        public async Task<IActionResult> LoginUser([FromBody] LoginUserViewModel user)
-        {
-            if (user == null) return Json(BadRequest());
+        //[HttpPost]
+        //public async Task<IActionResult> LoginUser([FromBody] LoginUserViewModel user)
+        //{
+        //    if (user == null) return Json(BadRequest());
             
-        }
+        //   
+        //}
     }
 }
