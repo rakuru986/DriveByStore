@@ -1,7 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests
+namespace Tests
 {
     public abstract class BaseClassTests<TClass, TBaseClass> : BaseTests
     {

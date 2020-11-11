@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
-namespace Abc.Tests
+namespace Tests
 {
     internal class htmlHelperMock<TModel> : IHtmlHelper<TModel>
     {

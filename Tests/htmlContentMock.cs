@@ -2,7 +2,7 @@
 using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Html;
 
-namespace Abc.Tests
+namespace Tests
 {
     internal class htmlContentMock : IHtmlContent
     {

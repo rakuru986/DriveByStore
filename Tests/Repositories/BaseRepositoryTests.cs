@@ -1,32 +1,35 @@
-﻿//using System.Threading.Tasks;
-//using Abc.Tests;
-//using Microsoft.EntityFrameworkCore;
-//using Models.Data;
-//using Models.Store;
-//using Repositories.Common;
+﻿using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Models.Data;
+using Models.Store;
+using Repositories.Common;
 
-//namespace Tests.Repositories
-//{
-//    class BaseRepositoryTests:AbstractClassTests<BaseRepository<Order, OrderData>, object>
-//    {
-//        private OrderData data;
-//        private class testClass : BaseRepository<Order, OrderData>
-//        {
-//            public testClass(DbContext c, DbSet<OrderData> s) : base(c, s)
-//            {
-//            }
+namespace Tests.Repositories
+{
+    [TestClass]
+    public class BaseRepositoryTests
+        : AbstractClassTests<BaseRepository<Order, OrderData>, object>
+    {
 
-//            protected override Order toModelObject(OrderData d) => new Order(d);
+        private class testClass : BaseRepository<Order, OrderData>
+        {
 
-//            protected override async Task<OrderData> getData(string id)
-//            {
-//                return await dbSet.FirstOrDefaultAsync(m => m.Id == id);
-//            }
+            public testClass(DbContext c, DbSet<OrderData> s) : base(c, s)
+            {
+            }
 
-//            //protected override OrderData getDataById(OrderData entity) => entity?.User?.Id;
+            protected internal override Order toModelObject(OrderData d) => MeasureFactory.Create(d);
 
-//        }
-        
+            protected override async Task<OrderData> getData(string id)
+            {
+                await Task.CompletedTask;
 
-//    }
-//}
+                return await dbSet.FindAsync(id);
+            }
+
+            protected override OrderData getDataById(OrderData d) => dbSet.Find(d.Id);
+
+        }
+    }
+}

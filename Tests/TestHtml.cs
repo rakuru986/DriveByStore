@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests
+namespace Tests
 {
     public static class TestHtml {
         public static void Strings(IReadOnlyList<object> actual, IReadOnlyList<string> expected)
