@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Maps;
 using Microsoft.AspNetCore.Mvc;
 using Models.Store.Interfaces;
@@ -28,11 +25,11 @@ namespace Soft.Controllers
             return Json(Ok(userItem));
         }
 
-        [HttpPost]
-        public async Task<IActionResult> LoginUser([FromBody] LoginUserViewModel user)
-        {
-            if (user == null) return Json(BadRequest());
+        //[HttpPost]
+        //public async Task<IActionResult> LoginUser([FromBody] LoginUserViewModel user)
+        //{
+        //    if (user == null) return Json(BadRequest());
             
-        }
+        //}
     }
 }
