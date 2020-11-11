@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Abc.Tests
+namespace Tests
 {
     public abstract class ClassTests<TClass, TBaseClass>: BaseClassTests<TClass, TBaseClass> where TClass : new()
     {

@@ -32,7 +32,8 @@ namespace Soft.Controllers
         public async Task<IActionResult> LoginUser([FromBody] LoginUserViewModel user)
         {
             if (user == null) return Json(BadRequest());
-            
+
+            return Json(Ok());
         }
     }
 }
