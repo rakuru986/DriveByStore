@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Models.Data;
+﻿using Models.Data;
 using Models.Store;
 using ViewModels;
 
