@@ -61,8 +61,7 @@
                                 placeholder="Password" 
                                 formControlName="password"> 
                             <span class="invalid-feedback">
-                                 <span *ngIf="registerForm.get('password').hasError('required')">Password can't be blank.</span>
-                                <span *ngIf="registerForm.get('password').hasError('symbol')">Password must contain @</span>
+                                <span *ngIf="registerForm.get('password').hasError('required')">Password can't be blank.</span>                                
                                 <span *ngIf="registerForm.get('password').hasError('minlength')">Password must be atleast 6 characters long</span>
                             </span>
                         </div>    
