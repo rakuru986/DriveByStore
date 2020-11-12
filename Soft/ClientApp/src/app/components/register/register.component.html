@@ -1,69 +1,91 @@
-<!-- <body class="text-center">
+<body class="text-center">
 
     <div class="row">
         <div class="col-md-4 offset-md-4">
             <div class="guest-form-card card">
 
                 <div class="card-header text-centre">
-                    <h2>REGISTER</h2>
+                    <h2>REGISTER</h2>                
                 </div>
 
-                <div class="card-body">
-                    <form class="form-signin" #loginForm="ngForm" (ngSubmit)="register()">
-
+                <div class="card-body">                    
+                    <form [formGroup]="registerForm" (ngSubmit)="register()">
+                        
                         <div class="form-group">
-                            <label for="inputEmail" class="sr-only">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email address" required autofocus>
-                            <span class="invalid-feedback">Username can't be blank.</span>
-                            <p>Valid :: {{ email.valid }}</p>
-                            <p>Invalid :: {{ email.invalid }}</p>
-                            <p>Touched :: {{ email.touched }}</p>
-                            <p>Untouched :: {{ email.untouched }}</p>
-                            <p>dirty :: {{ email.dirty }}</p>
-                            <p>pristine :: {{ email.untouched }}</p>
+                            <label for="firstName" class="sr-only">First Name</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                class="form-control"
+                                [ngClass]="{ 'is-invalid': registerForm.get('firstName').touched && registerForm.get('firstName').invalid }"
+                                placeholder="First Name" 
+                                formControlName="firstName" 
+                                autofocus>
+                            <span class="invalid-feedback">First Name can't be blank.</span>                            
                         </div>
 
                         <div class="form-group">
-                            <label for="inputFirstName" class="sr-only">FirstName</label>
-                            <input type="text" id="inputFirstName" class="form-control"
-                            [ngClass]="{ 'is-invalid': firstName.touched && firstName.invalid }" name="firstName" #addressPassword="ngModel" [(ngModel)]="model.firstName" placeholder="First Name" required>
-                            <span class="invalid-feedback">First Name can't be blank.</span>
+                            <label for="lastName" class="sr-only">Last Name</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                class="form-control"
+                                [ngClass]="{ 'is-invalid': registerForm.get('lastName').touched && registerForm.get('lastName').invalid }" 
+                                placeholder="Last Name" 
+                                formControlName="lastName">
+                            <span class="invalid-feedback">Last Name can't be blank.</span>                            
                         </div>
-
+                    
                         <div class="form-group">
-                            <label for="inputLastName" class="sr-only">LastName</label>
-                            <input type="text" id="inputLastName" class="form-control"
-                            [ngClass]="{ 'is-invalid': lastName.touched && lastName.invalid }" name="lastName" #addressPassword="ngModel" [(ngModel)]="model.firstName" placeholder="Last Name" required>
-                            <span class="invalid-feedback">Last Name can't be blank.</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="inputPhoneNumber" class="sr-only">PhoneNumber</label>
-                            <input type="tel" id="phoneNumber" class="form-control"
-                            [ngClass]="{ 'is-invalid': phoneNumber.touched && phoneNumber.invalid }" name="phoneNumber" #addressPassword="ngModel" [(ngModel)]="model.phoneNumber" placeholder="Phone Number" required>
-                            <span class="invalid-feedback">Phone Number can't be blank.</span>
+                            <label for="email" class="sr-only">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="inputEmail" 
+                                class="form-control"
+                                [ngClass]="{ 'is-invalid': registerForm.get('email').touched && registerForm.get('email').invalid }" 
+                                placeholder="Email Address" 
+                                formControlName="email">
+                            <span class="invalid-feedback">
+                                <span *ngIf="registerForm.get('email').hasError('required')">Email Address can't be blank.</span>
+                                <span *ngIf="registerForm.get('email').hasError('email')">Email Address must be valid.</span>
+                            </span>
                         </div>
 
                         <div class="form-group">
                             <label for="inputPassword" class="sr-only">Password</label>
-                            <input type="password" id="inputPassword" class="form-control"
-                            [ngClass]="{ 'is-invalid': password.touched && password.invalid }" name="password" #password="ngModel" [(ngModel)]="model.password" placeholder="Password" required>
-                            <span class="invalid-feedback">Password can't be blank.</span>
-                        </div>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                class="form-control"
+                                [ngClass]="{ 'is-invalid': registerForm.get('password').touched && registerForm.get('password').invalid }" 
+                                placeholder="Password" 
+                                formControlName="password"> 
+                            <span class="invalid-feedback">
+                                 <span *ngIf="registerForm.get('password').hasError('required')">Password can't be blank.</span>
+                                <span *ngIf="registerForm.get('password').hasError('symbol')">Password must contain @</span>
+                                <span *ngIf="registerForm.get('password').hasError('minlength')">Password must be atleast 6 characters long</span>
+                            </span>
+                        </div>    
+                        
                         <div class="form-group">
-                            <label for="inputRepeatPassword" class="sr-only">RepeatPassword</label>
-                            <input type="password" id="inputRepeatPassword" class="form-control"
-                            [ngClass]="{ 'is-invalid': repeatPassword.touched && repeatPassword.invalid }" name="repeatPassword" #repeatPassword="ngModel" [(ngModel)]="model.repeatPassword" placeholder="Repeat Password" required>
-                            <span class="invalid-feedback">Password can't be blank.</span>
+                            <label for="confirmPassword" class="sr-only">Confirm Password</label>
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                class="form-control"
+                                [ngClass]="{ 'is-invalid': registerForm.get('confirmPassword').touched && registerForm.get('confirmPassword').invalid }" 
+                                placeholder="Confirm Password" 
+                                formControlName="confirmPassword">
+                            <span class="invalid-feedback">Passwords have to match.</span>
                         </div>
 
-                        <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="loginForm.invalid">Register</button>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="registerForm.invalid">Register</button>  
                     </form>
-                </div>
+                </div>  
 
             </div>
-        </div>
+        </div>  
     </div>
 
 
-</body> -->
+</body>

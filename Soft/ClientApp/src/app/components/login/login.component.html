@@ -14,13 +14,7 @@
                         <div class="form-group">
                             <label for="inputEmail" class="sr-only">Email address</label>
                             <input type="email" id="inputEmail" class="form-control" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email address" required autofocus>
-                            <span class="invalid-feedback">Username can't be blank.</span>
-                            <!-- <p>Valid :: {{ email.valid }}</p>
-                            <p>Invalid :: {{ email.invalid }}</p>
-                            <p>Touched :: {{ email.touched }}</p>
-                            <p>Untouched :: {{ email.untouched }}</p>
-                            <p>dirty :: {{ email.dirty }}</p>
-                            <p>pristine :: {{ email.untouched }}</p> -->
+                            <span class="invalid-feedback">Username can't be blank.</span>                            
                         </div>
 
                         <div class="form-group">

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user.model'
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
+import { passwordsMatchValidator } from 'src/app/helpers/passwordsMatchValidator'
 
 @Component({
   selector: 'app-register',
@@ -7,21 +9,29 @@ import { User } from 'src/app/models/user.model'
   styleUrls: ['./register.component.css'],   
 })
 
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit {  
 
-  model: any 
+  registerForm: FormGroup;
 
-  constructor() { }
+  constructor(private builder: FormBuilder) { }
 
-  ngOnInit() {
+  ngOnInit() {   
+    this.buildForm();
   }
 
-  register(){    
-    //console.log(this.model)
-    this.modelList.push(this.model)
-    console.log(this.modelList)
+  buildForm(){
+    this.registerForm = this.builder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ''
+    }, {
+      validators: passwordsMatchValidator
+    })
   }
 
-  modelList: any [] = []
-
+  register(){
+    console.log(this.registerForm)
+  }
 }
