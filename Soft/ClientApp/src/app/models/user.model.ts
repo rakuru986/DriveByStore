@@ -3,8 +3,8 @@ export interface User {
     email: string;
     firstName: string;
     lastName: string;
-    password: string;
-    authority: boolean;
+    password: string; 
+    token: string;   
   }
   
   export interface UserData {
