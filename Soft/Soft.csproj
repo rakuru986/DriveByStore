@@ -25,24 +25,13 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="Data\Migrations\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="Data\Migrations\**" />
+    <EmbeddedResource Remove="Data\Migrations\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="Data\Migrations\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Data\Migrations\20201004184336_initial.cs" />
-    <Compile Remove="Data\Migrations\20201004184336_initial.Designer.cs" />
-    <Compile Remove="Data\Migrations\20201004184548_initial.cs" />
-    <Compile Remove="Data\Migrations\20201004184548_initial.Designer.cs" />
-    <Compile Remove="Data\Migrations\20201004190838_initial.cs" />
-    <Compile Remove="Data\Migrations\20201004190838_initial.Designer.cs" />
-    <Compile Remove="Data\Migrations\20201004193716_initial.cs" />
-    <Compile Remove="Data\Migrations\20201004193716_initial.Designer.cs" />
-    <Compile Remove="Data\Migrations\20201004195057_initial.cs" />
-    <Compile Remove="Data\Migrations\20201004195057_initial.Designer.cs" />
-    <Compile Remove="Data\Migrations\20201004201350_initial.cs" />
-    <Compile Remove="Data\Migrations\20201004201350_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,10 +39,6 @@
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
