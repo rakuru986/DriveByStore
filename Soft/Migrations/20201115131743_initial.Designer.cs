@@ -10,7 +10,7 @@ using Soft.Data;
 namespace Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201104100640_initial")]
+    [Migration("20201115131743_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -11,15 +11,19 @@ namespace Soft.Controllers
     public class ProductController : Controller
     {
         private readonly IProductRepository productRepository;
+        private readonly ProductsMapper mapper;
+        private readonly ProductService service;
 
         public ProductController(IProductRepository p)
         {
             productRepository = p;
+            mapper = new ProductsMapper();
+            service = new ProductService();
         }
 
         // product/GetAllProducts
         [HttpGet]
-        public async  Task<IActionResult> GetAllProducts()
+        public async Task<IActionResult> GetAllProducts()
         {
             var products = await productRepository.Get();
             return products == null ? Json(BadRequest("No products found")) : Json(Ok(products));
@@ -29,7 +33,6 @@ namespace Soft.Controllers
         public async Task<IActionResult> SaveProduct([FromBody]SaveProductViewModel product)
         {
             if (product == null) return Json(BadRequest());
-            var mapper = new ProductsMapper();
             var productItem = mapper.mapSaveProduct(product);
             await productRepository.Add(productItem);
             return Json(Ok(productItem));
@@ -45,7 +48,6 @@ namespace Soft.Controllers
 
             if (product.Id == Constants.Unspecified) return Json(BadRequest("Item with given id not found"));
 
-            var service = new ProductService();
             var updatedProduct = service.changeStock(product, item.changeCount, item.mode);
             await productRepository.Update(updatedProduct);
             return Json(Ok(updatedProduct.Data.Stock));

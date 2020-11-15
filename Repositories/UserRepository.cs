@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Models.Context;
 using Models.Data;
 using Models.Store;
@@ -15,5 +17,10 @@ namespace Repositories
         public UserRepository(StoreDbContext c = null) : base(c, c?.Users) { }
         protected internal override User toModelObject(UserData d) => new User(d);
 
+        public async Task<UserData> getUserByEmail(string email)
+        {
+            var user = await dbSet.FirstOrDefaultAsync(x => x.Email == email);
+            return user;
+        }
     }
 }
