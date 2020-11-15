@@ -106,6 +106,6 @@ namespace Repositories.Common
         }
 
         protected abstract TData getDataById(TData d);
-        public object getById(string id) => Get(id).GetAwaiter().GetResult();
+        public object GetById(string id) => Get(id).GetAwaiter().GetResult();
     }
 }

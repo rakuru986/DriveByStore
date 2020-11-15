@@ -26,4 +26,9 @@
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\Products\" />
+    <Folder Include="Repositories\Orders\" />
+  </ItemGroup>
+
 </Project>
