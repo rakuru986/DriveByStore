@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Util.Classes;
 using Util.Reflection;
 
-namespace Util.Tests {
+namespace Tests {
 
     public class BaseTests {
 
@@ -103,6 +103,8 @@ namespace Util.Tests {
                 dirName = dirName.Substring(0, lenght);
                 return dirName;
             }
+
+
         }
     }
 

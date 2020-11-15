@@ -7,6 +7,6 @@
 
     public interface IRepository
     {
-        object getById(string id);
+        object GetById(string id);
     }
 }

@@ -2,8 +2,7 @@
 using System.Globalization;
 using System.Linq;
 
-
-namespace Util.Extensions {
+namespace Util.Extensinons {
 
     public static class Strings {
 

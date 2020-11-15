@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common.Interfaces;
 using Models.Data.Common;
 using Soft;
+using Tests.Soft;
 using Util;
 using Util.Random;
-using Util.Tests;
 
-namespace Tests.Soft {
+namespace Tests {
 
     public abstract class BaseSoftTests : BaseTests {
 

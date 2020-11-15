@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Util.Extensions;
+using Util.Extensinons;
 
 namespace Util.Reflection {
 
