@@ -27,8 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Products\" />
-    <Folder Include="Repositories\Orders\" />
+    <Folder Include="Repositories\Inventory\" />
   </ItemGroup>
 
 </Project>
