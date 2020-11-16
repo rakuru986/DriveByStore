@@ -11,7 +11,7 @@ namespace Tests.Repositories.Products
 {
 
     [TestClass]
-    public class ProductCategoryRepositoryTests : ProductRepositoryTests<ProductCategoryRepository,
+    public class ProductCategoryRepositoriesTests : ProductRepositoriesTests<ProductCategoryRepository,
         ProductCategory, ProductCategoriesData>
     {
 

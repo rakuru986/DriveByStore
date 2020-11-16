@@ -16,14 +16,14 @@ namespace Tests.Repositories.Users
 {
     [TestClass]
     public class
-        UserRepositoryTests : UserRepositoriesTests<UserRepository, User, UserData>
+        InventoryRepositoryTests : InventoryRepositoriesTests<InventoryRepository, Inventory, InventoryData>
     {
 
-        protected override Type getBaseClass() => typeof(UniqueEntityRepository<User, UserData>);
+        protected override Type getBaseClass() => typeof(UniqueEntityRepository<Inventory, InventoryData>);
 
-        protected override UserRepository getObject(StoreDbContext c) => new UserRepository(c);
+        protected override InventoryRepository getObject(StoreDbContext c) => new InventoryRepository(c);
 
-        protected override DbSet<UserData> getSet(StoreDbContext c) => c.Users;
+        protected override DbSet<InventoryData> getSet(StoreDbContext c) => c.Inventory;
 
     }
 }
