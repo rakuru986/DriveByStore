@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Models.Data;
+﻿using Models.Data;
 using ViewModels;
+using BC = BCrypt.Net.BCrypt;
 
 namespace Services
 { 
@@ -10,7 +8,13 @@ namespace Services
     {
         public bool matchUser(LoginUserViewModel user, UserData foundUser)
         {
-            return user.passwordHash == foundUser.PasswordHash;
+
+            return BC.Verify(user.password, foundUser.PasswordHash);
+        }
+
+        public string generatePasswordHash(string password)
+        {
+            return BC.HashPassword(password);
         }
     }
 }

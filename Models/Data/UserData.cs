@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Models.Data.Common;
+﻿using Models.Data.Common;
 
 namespace Models.Data
 {
