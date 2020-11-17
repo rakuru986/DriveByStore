@@ -84,9 +84,9 @@ namespace Tests.Repositories.Common
         {
             var d = GetRandom.Object<OrderData>();
             var d1 = GetRandom.Object<OrderData>();
-            obj.Add(new Order()).GetAwaiter();
+            obj.Add(new Order(d)).GetAwaiter();
             d1.Id = d.Id;
-            obj.Update(new Order(d)).GetAwaiter();
+            obj.Update(new Order(d1)).GetAwaiter();
             var o = obj.Get(d.Id).GetAwaiter().GetResult();
             arePropertiesEqual(d1, o.Data);
         }
