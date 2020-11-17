@@ -1,10 +1,9 @@
-export interface User {
-    id: string;
+export interface User {    
     email: string;
     firstName: string;
     lastName: string;
-    password: string;
-    authority: boolean;
+    phoneNumber: string;
+    password: string;    
   }
   
   export interface UserData {
