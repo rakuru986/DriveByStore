@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 ﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Models.Context;
-=======
+
 ﻿using Models.Context;
->>>>>>> 61e5969 (Base repository jätk ja util klasside lisamine)
+
 using Models.Data;
 using Models.Store;
 using Models.Store.Interfaces;
