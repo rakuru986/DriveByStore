@@ -2,10 +2,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Models.Context;
-
-﻿using Models.Context;
-
-using Models.Data;
+ using Models.Data;
 using Models.Store;
 using Models.Store.Interfaces;
 using Repositories.Common;

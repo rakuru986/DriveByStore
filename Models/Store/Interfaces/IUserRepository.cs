@@ -3,10 +3,8 @@
 using Models.Common.Interfaces;
 using Models.Data;
 
-﻿using Models.Common.Interfaces;
 
-
-namespace Models.Store.Interfaces
+ namespace Models.Store.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {

@@ -14,42 +14,17 @@ using Util.Random;
 
 namespace Tests.Repositories.Orders
 {
-    public abstract class
-        OrderDetailsRepositoryTests<TRepository, TDomain, TData> : SealedTests<TRepository,
-            BaseRepository<TDomain, TData>>
-        where TRepository : BaseRepository<TDomain, TData>
-        where TData : OrderDetailsData, new()
-        where TDomain : IEntity<TData>
+    [TestClass]
+    public class OrderDetailsRepositoryTests : OrderRepositoriesTests<OrderDetailsRepository,
+        OrderDetails, OrderDetailsData>
     {
 
-        protected StoreDbContext db;
+        protected override Type getBaseClass() => typeof(UniqueEntityRepository<OrderDetails, OrderDetailsData>);
 
-        [TestInitialize]
-        public override void TestInitialize()
-        {
-            base.TestInitialize();
-            var options = new DbContextOptionsBuilder<StoreDbContext>().UseInMemoryDatabase("TestDb").Options;
-            db = new StoreDbContext(options);
-        }
+        protected override OrderDetailsRepository getObject(StoreDbContext c) =>
+            new OrderDetailsRepository(c);
 
-        [TestMethod]
-        public void CanSetContextAndSetTest()
-        {
-            obj = getObject(db);
-            Assert.AreSame(db, obj.db);
-            Assert.AreSame(getSet(db), obj.dbSet);
-        }
+        protected override DbSet<OrderDetailsData> getSet(StoreDbContext c) => c.OrderDetails;
 
-        protected abstract TRepository getObject(StoreDbContext db);
-
-        protected abstract DbSet<TData> getSet(StoreDbContext db);
-
-        [TestMethod]
-        public virtual void ToDomainObjectTest()
-        {
-            var d = (TData)GetRandom.Object(typeof(TData));
-            var o = obj.toModelObject(d);
-            arePropertiesEqual(d, o.Data);
-        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common;
@@ -7,25 +9,30 @@ using Models.Data;
 using Repositories.Common;
 using Util.Random;
 
-namespace Tests {
-
+namespace Tests.Repositories.Orders
+{
     public abstract class
-        UserRepositoriesTests<TRepository, TDomain, TData> : SealedTests<TRepository,
-            
+        OrderRepositoriesTests<TRepository, TDomain, TData> : SealedTests<TRepository,
+
             BaseRepository<TDomain, TData>>
         where TRepository : BaseRepository<TDomain, TData>
-        where TData : UserData, new()
-        where TDomain : Entity<TData> {
+        where TData : OrderDetailsData, new()
+        where TDomain : Entity<TData>
+    {
 
         protected StoreDbContext db;
 
-        [TestInitialize] public override void TestInitialize() {
+        [TestInitialize]
+        public override void TestInitialize()
+        {
             base.TestInitialize();
             var options = new DbContextOptionsBuilder<StoreDbContext>().UseInMemoryDatabase("TestDb").Options;
             db = new StoreDbContext(options);
         }
 
-        [TestMethod] public void CanSetContextAndSetTest() {
+        [TestMethod]
+        public void CanSetContextAndSetTest()
+        {
             obj = getObject(db);
             Assert.AreSame(db, obj.db);
             Assert.AreSame(getSet(db), obj.dbSet);
@@ -35,20 +42,13 @@ namespace Tests {
 
         protected abstract DbSet<TData> getSet(StoreDbContext db);
 
-        [TestMethod] public void ToDomainObjectTest() {
-            var d = (TData) GetRandom.Object(typeof(TData));
+        [TestMethod]
+        public void ToDomainObjectTest()
+        {
+            var d = (TData)GetRandom.Object(typeof(TData));
             var o = obj.toModelObject(d);
             arePropertiesEqual(d, o.Data);
         }
 
-        [TestMethod]
-        public void GetUserByEmailTest()
-        {
-            
-
-        }
-
     }
-
 }
-

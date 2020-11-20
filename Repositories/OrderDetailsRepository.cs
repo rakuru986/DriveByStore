@@ -9,6 +9,6 @@ namespace Repositories
     public sealed class OrderDetailsRepository : UniqueEntityRepository<OrderDetails, OrderDetailsData>, IOrderDetailsRepository
     {
         public OrderDetailsRepository(StoreDbContext c = null) : base(c, c?.OrderDetails) { }
-        protected internal override OrderDetails toModelObject(OrderDetailsData d) => new OrderDetails();
+        protected internal override OrderDetails toModelObject(OrderDetailsData d) => new OrderDetails(d);
     }
 }
