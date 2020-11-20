@@ -2,7 +2,7 @@
 
 namespace Models.Data
 {
-    public class ProductData : UniqueEntityData
+    public sealed class ProductData : UniqueEntityData
     {
         public string Name { get; set; }
         public double Price { get; set; }

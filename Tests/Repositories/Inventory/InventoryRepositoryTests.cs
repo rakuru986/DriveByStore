@@ -1,25 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Context;
 using Models.Data;
-using Models.Store;
-using Models.Store.Interfaces;
-using Repositories;
 using Repositories.Common;
-using Tests.Repositories.Common;
-using Tests.Repositories.Products;
+using Repositories.Inventory;
 
-namespace Tests.Repositories.Users
+namespace Tests.Repositories.Inventory
 {
     [TestClass]
     public class
-        InventoryRepositoryTests : InventoryRepositoriesTests<InventoryRepository, Inventory, InventoryData>
+        InventoryRepositoryTests : InventoryRepositoriesTests<InventoryRepository, global::Models.Store.Inventory, InventoryData>
     {
 
-        protected override Type getBaseClass() => typeof(UniqueEntityRepository<Inventory, InventoryData>);
+        protected override Type getBaseClass() => typeof(UniqueEntityRepository<global::Models.Store.Inventory, InventoryData>);
 
         protected override InventoryRepository getObject(StoreDbContext c) => new InventoryRepository(c);
 

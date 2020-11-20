@@ -7,6 +7,7 @@ using Models.Store;
 using Models.Store.Interfaces;
 using Repositories;
 using Repositories.Common;
+using Repositories.Orders;
 
 namespace Tests.Repositories.Orders {
 

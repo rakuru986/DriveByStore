@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common.Interfaces;
 using Models.Context;
 using Models.Data;
+using Models.Data.Common;
 using Repositories.Common;
 using Util.Random;
 
@@ -12,8 +13,8 @@ namespace Tests.Repositories.Products
     public abstract class
         ProductRepositoriesTests<TRepository, TDomain, TData> : SealedTests<TRepository,
             BaseRepository<TDomain, TData>>
-        where TRepository : BaseRepository<TDomain, TData>
-        where TData : ProductCategoriesData, new()
+        where TRepository : UniqueEntityRepository<TDomain, TData>
+        where TData : UniqueEntityData, new()
         where TDomain : IEntity<TData>
     {
 

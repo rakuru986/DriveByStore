@@ -4,7 +4,7 @@ using Models.Store;
 using Models.Store.Interfaces;
 using Repositories.Common;
 
-namespace Repositories
+namespace Repositories.Products
 {
     public sealed class ProductCategoryRepository : UniqueEntityRepository<ProductCategory, ProductCategoriesData>, IProductCategoryRepository
     {

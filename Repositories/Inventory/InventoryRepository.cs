@@ -1,0 +1,13 @@
+﻿using Models.Context;
+using Models.Data;
+using Models.Store.Interfaces;
+using Repositories.Common;
+
+namespace Repositories.Inventory
+{
+    public sealed class InventoryRepository : UniqueEntityRepository<Models.Store.Inventory, InventoryData>, IInventoryRepository
+    {
+        public InventoryRepository(StoreDbContext c) : base(c, c?.Inventory) { }
+        protected internal override Models.Store.Inventory toModelObject(InventoryData d) => new Models.Store.Inventory(d);
+    }
+}

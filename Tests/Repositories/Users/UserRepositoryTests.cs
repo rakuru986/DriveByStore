@@ -9,6 +9,7 @@ using Models.Store;
 using Models.Store.Interfaces;
 using Repositories;
 using Repositories.Common;
+using Repositories.Users;
 using Tests.Repositories.Common;
 using Tests.Repositories.Products;
 

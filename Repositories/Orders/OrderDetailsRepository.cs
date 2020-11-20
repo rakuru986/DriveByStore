@@ -4,7 +4,7 @@ using Models.Store;
 using Models.Store.Interfaces;
 using Repositories.Common;
 
-namespace Repositories
+namespace Repositories.Orders
 {
     public sealed class OrderDetailsRepository : UniqueEntityRepository<OrderDetails, OrderDetailsData>, IOrderDetailsRepository
     {
