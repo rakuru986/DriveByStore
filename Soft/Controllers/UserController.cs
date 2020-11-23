@@ -38,9 +38,9 @@ namespace Soft.Controllers
             var foundUser = await userRepository.getUserByEmail(user.email);
             if (foundUser != null)
             {
-                return service.matchUser(user, foundUser) ? Json(Ok(foundUser)) : Json(BadRequest("Wrong username or password"));
+                return service.matchUser(user, foundUser) ? Json(Ok(foundUser)) : Json(Unauthorized("Wrong username or password"));
             }
-            return Json(BadRequest("User with given email not found"));
+            return Json(Unauthorized("Wrong username or password"));
         }
 
         [HttpPost]
