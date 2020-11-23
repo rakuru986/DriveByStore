@@ -23,6 +23,9 @@ import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.comp
 import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { OrderViewComponent } from './components/order-view/order-view.component';
+import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
+
 
 
 @NgModule({
@@ -45,6 +48,8 @@ import { RegisterComponent } from './components/register/register.component';
     ProductItemComponent,
     LoginComponent,
     RegisterComponent,
+    OrderViewComponent,
+    ShippingFormComponent,    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -61,6 +66,7 @@ import { RegisterComponent } from './components/register/register.component';
       { path: 'skateboards', component: SkateboardsComponent },
       { path: 'scooters', component: ScootersComponent },
       { path: 'tools', component: ToolsComponent},
+      { path: 'order', component: OrderViewComponent}
 
     ])
   ],
