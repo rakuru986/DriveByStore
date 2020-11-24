@@ -1,6 +1,7 @@
 ﻿using Models.Data.Common;
+using Models.Data.Products;
 
-namespace Models.Data
+namespace Models.Data.Orders
 {
     public class OrderDetailsData : UniqueEntityData
     {

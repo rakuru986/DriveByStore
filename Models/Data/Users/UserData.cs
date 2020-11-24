@@ -1,8 +1,8 @@
 ﻿using Models.Data.Common;
 
-namespace Models.Data
+namespace Models.Data.Users
 {
-    public class UserData :UniqueEntityData
+    public sealed class UserData :UniqueEntityData
     {
         public string Email { get; set; }
         public string FirstName { get; set; }

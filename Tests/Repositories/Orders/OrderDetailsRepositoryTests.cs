@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common.Interfaces;
 using Models.Context;
 using Models.Data;
+using Models.Data.Orders;
 using Models.Store;
 using Repositories;
 using Repositories.Common;

@@ -1,7 +1,8 @@
-
-﻿using System.Threading.Tasks;
+﻿
+ using System.Threading.Tasks;
 using Models.Common.Interfaces;
 using Models.Data;
+ using Models.Data.Users;
 
 
  namespace Models.Store.Interfaces

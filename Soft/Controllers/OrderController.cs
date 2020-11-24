@@ -3,6 +3,7 @@ using Maps;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Models.Data;
+using Models.Data.Users;
 using Models.Store.Interfaces;
 using ViewModels;
 

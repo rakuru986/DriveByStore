@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common;
 using Models.Data;
+using Models.Data.Users;
 using Util.Random;
 
 namespace Tests.Models

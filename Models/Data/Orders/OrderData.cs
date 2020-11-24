@@ -1,9 +1,10 @@
 ﻿using System;
 using Models.Data.Common;
+using Models.Data.Users;
 
-namespace Models.Data
+namespace Models.Data.Orders
 {
-    public class OrderData : UniqueEntityData
+    public sealed class OrderData : UniqueEntityData
     {
         public string UserId { get; set; }
         public UserData User { get; set; }

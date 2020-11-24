@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Data;
 using Models.Data.Common;
+using Models.Data.Products;
 
 namespace Tests.Models.Data.Products
 {

@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common;
 using Models.Context;
 using Models.Data;
+using Models.Data.Common;
 using Repositories.Common;
 using Util.Random;
 
@@ -16,7 +17,7 @@ namespace Tests.Repositories.Orders
 
             BaseRepository<TDomain, TData>>
         where TRepository : BaseRepository<TDomain, TData>
-        where TData : OrderDetailsData, new()
+        where TData : UniqueEntityData, new()
         where TDomain : Entity<TData>
     {
 

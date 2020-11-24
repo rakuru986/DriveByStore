@@ -1,4 +1,5 @@
 ﻿using Models.Data;
+using Models.Data.Products;
 using Models.Store;
 using ViewModels;
 

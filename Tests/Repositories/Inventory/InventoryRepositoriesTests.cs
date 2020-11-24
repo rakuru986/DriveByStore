@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common;
 using Models.Context;
 using Models.Data;
+using Models.Data.Common;
 using Repositories.Common;
 using Util.Random;
 
@@ -13,7 +14,7 @@ namespace Tests {
             
             BaseRepository<TDomain, TData>>
         where TRepository : BaseRepository<TDomain, TData>
-        where TData : InventoryData, new()
+        where TData : UniqueEntityData, new()
         where TDomain : Entity<TData> {
 
         protected StoreDbContext db;

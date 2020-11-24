@@ -1,8 +1,9 @@
 ﻿using Models.Data.Common;
+using Models.Data.Products;
 
-namespace Models.Data
+namespace Models.Data.Inventory
 {
-    public class InventoryData : UniqueEntityData
+    public sealed class InventoryData : UniqueEntityData
     {
         public string ProductId { get; set; }
         public ProductData Product { get; set; }

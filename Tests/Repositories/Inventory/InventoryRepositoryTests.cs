@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Context;
 using Models.Data;
+using Models.Data.Inventory;
 using Repositories.Common;
 using Repositories.Inventory;
 
