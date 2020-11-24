@@ -3,8 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Models.Context;
 using Models.Data;
 using Models.Store;
-using Models.Store.Interfaces;
 using Repositories.Common;
+using Repositories.Interfaces;
 
 namespace Repositories
 {

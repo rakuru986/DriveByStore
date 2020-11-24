@@ -1,8 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Models.Common.Interfaces;
 using Models.Data;
+using Models.Store;
 
-namespace Models.Store.Interfaces
+namespace Repositories.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {
