@@ -14,4 +14,7 @@
     <li class="list-group-item active">
         <strong>Total</strong> {{ cartTotal | currency:'EUR' }}
     </li>
+    
+    <button class="btn-success" routerLink="/order" (click)="handleOrder()">Check out</button>
+
 </ul>

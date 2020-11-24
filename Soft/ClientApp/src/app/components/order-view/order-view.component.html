@@ -6,37 +6,108 @@
           <div class="card">
             <div class="card-body">
               <h4 class="card-title text-center">Order Details</h4>
-              <ul class="list-group list-group-flush">
+              <ul class="list-group list-group-flush">                
                 <li class="list-group-item">
-                  <span class="font-weight-bold">Customer Name: Artur</span>
-                </li>
-                <li class="list-group-item">
-                  <span class="font-weight-bold">Order Date: 23.11.2020</span>
+                  <span class="font-weight-bold">Order Date:</span>
                 </li>
                 <li class="list-group-item"><span class="font-weight-bold">Order:</span>
                   <div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item"> Auto                        
-                        <div class="float-right">100£</div>
+                      <li class="list-group-item" *ngFor="let item of orderProducts">
+                        {{item.productName}} x {{item.qty}}                       
+                        <div class="float-right">{{(item.price*item.qty) | currency:'EUR'}}</div>
                       </li>
                       <li class="list-group-item">
-                          <span class="font-weight-bold">Total: 69420</span>
-                          <div class="float-right"></div>
+                          <span class="font-weight-bold">Total: </span>
+                          <div class="float-right">{{orderTotalPrice | currency:'EUR'}}</div>
                       </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="list-group-item"><span class="font-weight-bold">Shipping Address: Tartu kuskil</span>
-                  <div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"> Name : ARtur</li>
-                      <li class="list-group-item"> Address Line 1 : Tartu küla</li>
-                      <li class="list-group-item"> Address Line 2 : Tartu </li>
-                      <li class="list-group-item"> City : Tartu</li>
                     </ul>
                   </div>
                 </li>
               </ul>
+
+              <form class="list-group-item" [formGroup]="orderForm" (ngSubmit)="order()">
+                <div class="form-group form-inline">
+                  <label class="order" for="firstName">First Name</label>
+                  <input 
+                  type="text" 
+                  id="firstName" 
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': orderForm.get('firstName').touched && orderForm.get('firstName').invalid }"
+                  formControlName="firstName"
+                  autofocus
+                  >
+                </div>
+
+                <div class="form-group form-inline">
+                  <label class="order" for="lastName">Last Name</label>
+                  <input 
+                  type="text" 
+                  id="lastName" 
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': orderForm.get('lastName').touched && orderForm.get('lastName').invalid }"
+                  formControlName="lastName"
+                  >
+                </div>
+
+                <div class="form-group form-inline">
+                  <label class="order" for="address">Address</label>
+                  <input 
+                  type="text" 
+                  id="address" 
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': orderForm.get('address').touched && orderForm.get('address').invalid }"
+                  formControlName="address"
+                  >
+                </div>
+
+                <div class="form-group form-inline">
+                  <label class="order" for="city">City</label>
+                  <input 
+                  type="text" 
+                  id="city" 
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': orderForm.get('city').touched && orderForm.get('city').invalid }"
+                  formControlName="city"
+                  >
+                </div>
+
+                <div class="form-group form-inline">
+                  <label class="order" for="zip">Zip</label>
+                  <input 
+                  type="text" 
+                  id="zip" 
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': orderForm.get('zip').touched && orderForm.get('zip').invalid }"
+                  formControlName="zip"
+                  >
+                </div>
+
+                <div class="form-group form-inline">
+                  <label class="order" for="phoneNumber">Phone</label>
+                  <input 
+                  type="tel" 
+                  id="phoneNumber" 
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': orderForm.get('phoneNumber').touched && orderForm.get('phoneNumber').invalid }"
+                  formControlName="phoneNumber"
+                  >
+                </div>
+
+                <div class="form-group form-inline">
+                  <label class="order" for="email">Email</label>
+                  <input 
+                  type="email" 
+                  id="email" 
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': orderForm.get('email').touched && orderForm.get('email').invalid }"
+                  formControlName="email"
+                  >
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="orderForm.invalid">Confirm Order</button>
+              </form>
+
             </div>
           </div>
         </ng-container>
