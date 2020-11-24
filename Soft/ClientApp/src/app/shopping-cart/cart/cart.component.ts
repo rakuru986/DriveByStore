@@ -67,4 +67,10 @@ export class CartComponent implements OnInit{
              this.cartTotal += (item.qty * item.price)
          })
     }
+
+    handleOrder(){
+        // this.msg.sendMsg(this.cartItems)
+        this.msg.setProducts(this.cartItems);
+        this.msg.setTotal(this.cartTotal);
+    }
 }

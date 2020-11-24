@@ -25,6 +25,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OrderViewComponent } from './components/order-view/order-view.component';
 import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
+import { OrderService } from 'src/app/services/order.service';
 
 
 
@@ -50,6 +51,7 @@ import { ShippingFormComponent } from './components/shipping-form/shipping-form.
     RegisterComponent,
     OrderViewComponent,
     ShippingFormComponent,    
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

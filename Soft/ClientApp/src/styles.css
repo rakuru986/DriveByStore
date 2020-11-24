@@ -100,3 +100,8 @@ body {
 .guest-form-card label{
   font-size: small;
 }
+
+.order{  
+  width: 100px;
+  padding-right:20pxS;
+}
