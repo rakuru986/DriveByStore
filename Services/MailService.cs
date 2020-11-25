@@ -20,7 +20,7 @@ namespace Services
             mailSettings = settings.Value;
         }
 
-        public void SendEmailAsync(MailRequest mailRequest)
+        public void SendEmail(MailRequest mailRequest)
         {
             var email = new MimeMessage();
             email.Sender = MailboxAddress.Parse(mailSettings.Mail);
@@ -29,21 +29,6 @@ namespace Services
             var builder = new BodyBuilder();
             builder.HtmlBody = mailRequest.Body;
             email.Body = builder.ToMessageBody();
-
-            //using (MailMessage mail = new MailMessage())
-            //{
-            //    mail.From = new MailAddress(mailSettings.Mail);
-            //    mail.To.Add(mailRequest.ToEmail);
-            //    mail.Subject = mailRequest.Subject;
-            //    mail.Body = mailRequest.Body;
-            //    mail.IsBodyHtml = true; 
-            //    using (System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient(mailSettings.Host, mailSettings.Port))
-            //    {
-            //        smtp.Credentials = new NetworkCredential(mailSettings.Mail, mailSettings.Password);
-            //        smtp.EnableSsl = true;
-            //        smtp.Send(mail);
-            //    }
-            //}
 
             using var smtp = new MailKit.Net.Smtp.SmtpClient();
             smtp.Connect(mailSettings.Host, mailSettings.Port, SecureSocketOptions.SslOnConnect);

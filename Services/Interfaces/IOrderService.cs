@@ -9,6 +9,6 @@ namespace Services.Interfaces
 {
     public interface IOrderService
     {
-        void SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository);
+        void SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository, string orderId);
     }
 }

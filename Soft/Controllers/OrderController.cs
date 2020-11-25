@@ -38,7 +38,7 @@ namespace Soft.Controllers
                 await orderDetailsRepository.Add(detailsItem);
             }
 
-            orderService.SendOrderConfirmation(order, productRepository);
+            orderService.SendOrderConfirmation(order, productRepository, orderItem.Id);
 
             return Json(Ok(orderItem));
         }
