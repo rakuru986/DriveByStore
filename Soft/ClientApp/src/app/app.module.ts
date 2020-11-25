@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 //import { AppRoutingModule } from './app-routing.module'
 
@@ -25,7 +25,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { OrderViewComponent } from './components/order-view/order-view.component';
 import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
-import { OrderService } from 'src/app/services/order.service';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -69,8 +70,9 @@ import { OrderService } from 'src/app/services/order.service';
       { path: 'scooters', component: ScootersComponent },
       { path: 'tools', component: ToolsComponent},
       { path: 'order', component: OrderViewComponent}
-
-    ])
+    ]),
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],

@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Injectable({
     providedIn: 'root'
 })
 export class OrderService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private spinnerService: NgxSpinnerService, private router: Router) { }
 
   sendOrderUrl = "https://localhost:44352/order/createOrder"
 
@@ -28,10 +30,15 @@ export class OrderService {
         "productList": orderProductList,
     }
 
+    this.spinnerService.show();
     return this.http.post<any>(this.sendOrderUrl, obj, {observe:"response"})
         .toPromise()
         .then(response => {
-            console.log(response);
+            if (response.status == 200) {
+                console.log(response.body.value.data);
+                this.router.navigateByUrl("/");
+            }
+            this.spinnerService.hide();
         });    
     
   }

@@ -2,6 +2,7 @@
 using Maps;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Interfaces;
+using Services.Interfaces;
 using ViewModels;
 
 namespace Soft.Controllers
@@ -11,13 +12,15 @@ namespace Soft.Controllers
         private readonly IOrderRepository orderRepository;
         private readonly IOrderDetailsRepository orderDetailsRepository;
         private readonly IProductRepository productRepository;
+        private readonly IOrderService orderService;
         private readonly OrdersMapper mapper;
 
-        public OrderController(IOrderRepository o, IOrderDetailsRepository od, IProductRepository p)
+        public OrderController(IOrderRepository o, IOrderDetailsRepository od, IProductRepository p, IOrderService os)
         {
             orderRepository = o;
             orderDetailsRepository = od;
             productRepository = p;
+            orderService = os;
             mapper = new OrdersMapper();
         }
 
@@ -34,6 +37,9 @@ namespace Soft.Controllers
                 var detailsItem = mapper.mapOrderDetails(productItem, product, orderId);
                 await orderDetailsRepository.Add(detailsItem);
             }
+
+            orderService.SendOrderConfirmation(order, productRepository);
+
             return Json(Ok(orderItem));
         }
 

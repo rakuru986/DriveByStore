@@ -38,7 +38,9 @@ namespace Soft
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            configureJwtToken(services);
+            //configureJwtToken(services);
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
 
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -48,7 +50,9 @@ namespace Soft
                 configuration.RootPath = "ClientApp/dist";
             });
 
-            services.AddSingleton<IJwtAuthManager, JwtAuthManager>();
+            //services.AddSingleton<IJwtAuthManager, JwtAuthManager>();
+            services.AddSingleton<IOrderService, OrderService>();
+            services.AddTransient<IMailService, MailService>();
 
             services.AddScoped<IInventoryRepository, InventoryRepository>();
             services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
