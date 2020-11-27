@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -27,6 +27,7 @@ import { OrderViewComponent } from './components/order-view/order-view.component
 import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OrderSuccessComponent } from './components/order-view/order-success/order-success.component';
 
 
 
@@ -51,7 +52,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     RegisterComponent,
     OrderViewComponent,
-    ShippingFormComponent,    
+    ShippingFormComponent,
+    OrderSuccessComponent,    
     
   ],
   imports: [
@@ -69,7 +71,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       { path: 'skateboards', component: SkateboardsComponent },
       { path: 'scooters', component: ScootersComponent },
       { path: 'tools', component: ToolsComponent},
-      { path: 'order', component: OrderViewComponent}
+      { path: 'order', component: OrderViewComponent},
+      { path: 'order/order-success', component: OrderSuccessComponent}
     ]),
     NgxSpinnerModule,
     BrowserAnimationsModule
