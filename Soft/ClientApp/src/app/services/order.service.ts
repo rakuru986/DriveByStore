@@ -36,7 +36,7 @@ export class OrderService {
         .then(response => {
             if (response.status == 200) {
                 console.log(response.body.value.data);
-                this.router.navigateByUrl("/");
+                this.router.navigateByUrl("/order/order-success");
             }
             this.spinnerService.hide();
         });    
