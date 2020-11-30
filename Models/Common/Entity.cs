@@ -9,6 +9,7 @@ namespace Models.Common
         protected readonly TData data;
         protected internal Entity(TData d = null) => data = d;
 
+
         public TData Data
         {
             get
