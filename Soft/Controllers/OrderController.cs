@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using Maps;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Interfaces;
 using Services.Interfaces;
+using Util;
 using ViewModels;
 
 namespace Soft.Controllers
@@ -13,15 +13,17 @@ namespace Soft.Controllers
         private readonly IOrderDetailsRepository orderDetailsRepository;
         private readonly IProductRepository productRepository;
         private readonly IOrderService orderService;
-        private readonly OrdersMapper mapper;
+        private readonly IProductService productService;
+        private readonly IMapperService mapper;
 
-        public OrderController(IOrderRepository o, IOrderDetailsRepository od, IProductRepository p, IOrderService os)
+        public OrderController(IOrderRepository o, IOrderDetailsRepository od, IProductRepository p, IOrderService os, IMapperService ms, IProductService ps)
         {
             orderRepository = o;
             orderDetailsRepository = od;
             productRepository = p;
             orderService = os;
-            mapper = new OrdersMapper();
+            productService = ps;
+            mapper = ms;
         }
 
         [HttpPost]
@@ -34,11 +36,14 @@ namespace Soft.Controllers
             foreach (var product in order.productList)
             {
                 var productItem = await productRepository.Get(product.productId);
+                await productService.changeStock(product.productId, product.quantity, Constants.REDUCE,
+                    productRepository);
+
                 var detailsItem = mapper.mapOrderDetails(productItem, product, orderId);
                 await orderDetailsRepository.Add(detailsItem);
             }
 
-            orderService.SendOrderConfirmation(order, productRepository, orderItem.Id);
+            await orderService.SendOrderConfirmation(order, productRepository, orderItem.Id);
 
             return Json(Ok(orderItem));
         }

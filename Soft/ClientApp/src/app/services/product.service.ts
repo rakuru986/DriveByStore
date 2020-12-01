@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { GetProducts, Product } from 'src/app/models/product.model';
@@ -29,11 +30,13 @@ export class ProductService {
     httpValue.forEach(item => {
       this.products.push(item.data);
     });
+    localStorage.removeItem("products");
+    localStorage.setItem("products", JSON.stringify(this.products));
   }
 
   getProducts() {
-    return this.products;
+    return JSON.parse(localStorage.getItem("products"));
   }
 
-  
+
 }

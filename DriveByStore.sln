@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{D54A6351-0344-47B9-BBF7-D5344BAADB7E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maps", "Maps\Maps.csproj", "{7B5D9C79-D92C-47BE-87CB-02231D86D306}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{8247E3CA-6993-44D3-9E27-124268044A93}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{F2753930-C31D-4BC7-9EB8-276889FD5479}"
@@ -37,10 +35,6 @@ Global
 		{D54A6351-0344-47B9-BBF7-D5344BAADB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D54A6351-0344-47B9-BBF7-D5344BAADB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D54A6351-0344-47B9-BBF7-D5344BAADB7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B5D9C79-D92C-47BE-87CB-02231D86D306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B5D9C79-D92C-47BE-87CB-02231D86D306}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B5D9C79-D92C-47BE-87CB-02231D86D306}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B5D9C79-D92C-47BE-87CB-02231D86D306}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8247E3CA-6993-44D3-9E27-124268044A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8247E3CA-6993-44D3-9E27-124268044A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8247E3CA-6993-44D3-9E27-124268044A93}.Release|Any CPU.ActiveCfg = Release|Any CPU

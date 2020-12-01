@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { OrderService } from 'src/app/services/order.service';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-order-view',
@@ -20,20 +21,20 @@ export class OrderViewComponent implements OnInit {
 
   orderTotalPrice:number;
 
-  constructor(private builder: FormBuilder, private msg: MessengerService, private orderService: OrderService, private router: Router) { }
+  constructor(private builder: FormBuilder, private msg: MessengerService, private orderService: OrderService) { }
 
   ngOnInit(): void {
     this.buildForm();
     // this.msg.getMsg().subscribe((productList: any)=>{
     //   this.orderProducts = productList;
     //   console.log(this.orderProducts);
-    // })    
+    // })
     this.orderProducts=this.msg.getProducts();
     this.orderTotalPrice=this.msg.getTotal();
     //console.log(this.orderProducts);
-  } 
+  }
 
-  
+
 
   buildForm(){
     this.orderForm = this.builder.group({

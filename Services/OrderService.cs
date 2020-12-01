@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Threading.Tasks;
 using Models.Common;
 using Repositories.Interfaces;
 using Services.Interfaces;
@@ -18,7 +19,7 @@ namespace Services
             mailService = ms;
         }
 
-        public async void SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository, string orderId)
+        public async Task SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository, string orderId)
         {
             string filePath = Directory.GetCurrentDirectory() + "\\..\\Util\\EmailTemplates\\OrderConfirmation.html";
             StreamReader str = new StreamReader(filePath);
@@ -49,7 +50,7 @@ namespace Services
                 Subject = Constants.OrderConfirmationEmailSubject,
                 ToEmail = order.email
             };
-            mailService.SendEmail(mail);
+            await mailService.SendEmail(mail);
         }
     }
 }

@@ -52,6 +52,9 @@ namespace Soft
 
             //services.AddSingleton<IJwtAuthManager, JwtAuthManager>();
             services.AddSingleton<IOrderService, OrderService>();
+            services.AddSingleton<IMapperService, MapperService>();
+            services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IProductService, ProductService>();
             services.AddTransient<IMailService, MailService>();
 
             services.AddScoped<IInventoryRepository, InventoryRepository>();

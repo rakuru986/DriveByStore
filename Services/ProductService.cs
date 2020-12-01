@@ -1,12 +1,26 @@
-﻿using Models.Data;
+﻿using System.Threading.Tasks;
+using Models.Data;
 using Models.Store;
+using Repositories.Interfaces;
+using Services.Interfaces;
 using Util;
 
 namespace Services
 {
-    public class ProductService
+    public class ProductService : IProductService
     {
-        public Product changeStock(Product product, int changeCount, string mode)
+        public async Task<bool> changeStock(string productId, int changeCount, string mode, IProductRepository pr)
+        {
+            var product = await pr.Get(productId);
+
+            if (product.Id == Constants.Unspecified) return false;
+
+            var updatedProduct = getUpdatedProduct(product, changeCount, mode);
+            await pr.Update(updatedProduct);
+            return true;
+        }
+
+        private Product getUpdatedProduct(Product product, int changeCount, string mode)
         {
             int newStock = product.Data.Stock;
             if (mode == Constants.ADD) { newStock += changeCount; }
