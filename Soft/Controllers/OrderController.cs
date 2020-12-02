@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Models.Data;
-using Models.Data.Users;
-using Models.Store.Interfaces;
+using Repositories.Interfaces;
+using Services.Interfaces;
+using Util;
 using ViewModels;
 
 namespace Soft.Controllers

@@ -58,12 +58,15 @@
     <Compile Remove="Migrations\20201125073216_initial.Designer.cs" />
     <Compile Remove="Migrations\20201128152844_initi4.cs" />
     <Compile Remove="Migrations\20201128152844_initi4.Designer.cs" />
+    <Compile Remove="Migrations\20201201103322_initial.cs" />
+    <Compile Remove="Migrations\20201201103322_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
+    <ProjectReference Include="..\Util\Util.csproj" />
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 

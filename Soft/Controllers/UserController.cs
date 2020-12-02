@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Models.Store.Interfaces;
 using Repositories.Interfaces;
 using Services.Interfaces;
 using ViewModels;

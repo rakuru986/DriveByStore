@@ -10,7 +10,7 @@ using Soft.Data;
 namespace Soft.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201201103322_initial")]
+    [Migration("20201202095901_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace Soft.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Models.Data.InventoryData", b =>
+            modelBuilder.Entity("Models.Data.Inventory.InventoryData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -39,7 +39,7 @@ namespace Soft.Migrations
                     b.ToTable("Inventory");
                 });
 
-            modelBuilder.Entity("Models.Data.OrderData", b =>
+            modelBuilder.Entity("Models.Data.Orders.OrderData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -78,7 +78,7 @@ namespace Soft.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Models.Data.OrderDetailsData", b =>
+            modelBuilder.Entity("Models.Data.Orders.OrderDetailsData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -104,7 +104,7 @@ namespace Soft.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("Models.Data.ProductCategoriesData", b =>
+            modelBuilder.Entity("Models.Data.Products.ProductCategoriesData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -117,7 +117,7 @@ namespace Soft.Migrations
                     b.ToTable("ProductCategories");
                 });
 
-            modelBuilder.Entity("Models.Data.ProductData", b =>
+            modelBuilder.Entity("Models.Data.Products.ProductData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -147,7 +147,7 @@ namespace Soft.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Models.Data.UserData", b =>
+            modelBuilder.Entity("Models.Data.Users.UserData", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -172,34 +172,34 @@ namespace Soft.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Models.Data.InventoryData", b =>
+            modelBuilder.Entity("Models.Data.Inventory.InventoryData", b =>
                 {
-                    b.HasOne("Models.Data.ProductData", "Product")
+                    b.HasOne("Models.Data.Products.ProductData", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
                 });
 
-            modelBuilder.Entity("Models.Data.OrderData", b =>
+            modelBuilder.Entity("Models.Data.Orders.OrderData", b =>
                 {
-                    b.HasOne("Models.Data.UserData", "User")
+                    b.HasOne("Models.Data.Users.UserData", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
 
-            modelBuilder.Entity("Models.Data.OrderDetailsData", b =>
+            modelBuilder.Entity("Models.Data.Orders.OrderDetailsData", b =>
                 {
-                    b.HasOne("Models.Data.OrderData", "Order")
+                    b.HasOne("Models.Data.Orders.OrderData", "Order")
                         .WithMany()
                         .HasForeignKey("OrderId");
 
-                    b.HasOne("Models.Data.ProductData", "Product")
+                    b.HasOne("Models.Data.Products.ProductData", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
                 });
 
-            modelBuilder.Entity("Models.Data.ProductData", b =>
+            modelBuilder.Entity("Models.Data.Products.ProductData", b =>
                 {
-                    b.HasOne("Models.Data.ProductCategoriesData", "ProductCategory")
+                    b.HasOne("Models.Data.Products.ProductCategoriesData", "ProductCategory")
                         .WithMany()
                         .HasForeignKey("ProductCategoryId");
                 });

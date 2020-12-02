@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Models.Common;
 using Models.Context;
+using Models.Store.Interfaces;
 using Repositories;
 using Repositories.Inventory;
 using Repositories.Orders;

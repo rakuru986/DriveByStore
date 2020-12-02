@@ -4,6 +4,7 @@ using Models.Context;
 using Models.Data;
 using Models.Data.Users;
 using Models.Store;
+using Models.Store.Interfaces;
 using Repositories.Common;
 using Repositories.Interfaces;
 

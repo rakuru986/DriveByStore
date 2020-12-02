@@ -1,5 +1,6 @@
 ﻿using Models.Data;
 using Models.Data.Users;
+using Services.Interfaces;
 using ViewModels;
 using BC = BCrypt.Net.BCrypt;
 
