@@ -1,5 +1,6 @@
 ﻿using Models.Common;
 using Models.Data;
+using Models.Data.Users;
 
 namespace Models.Store
 {

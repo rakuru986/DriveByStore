@@ -1,4 +1,5 @@
 ﻿using Models.Data;
+using Models.Data.Users;
 using ViewModels;
 
 namespace Services.Interfaces

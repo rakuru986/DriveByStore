@@ -1,5 +1,8 @@
 ﻿using System;
 using Models.Data;
+using Models.Data.Orders;
+using Models.Data.Products;
+using Models.Data.Users;
 using Models.Store;
 using Services.Interfaces;
 using ViewModels;

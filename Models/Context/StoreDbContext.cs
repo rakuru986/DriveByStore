@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Models.Data;
+using Models.Data.Inventory;
+using Models.Data.Orders;
+using Models.Data.Products;
+using Models.Data.Users;
 
 namespace Models.Context
 {

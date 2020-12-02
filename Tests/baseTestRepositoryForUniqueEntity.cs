@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Models.Common;
 using Models.Data.Common;
 
-namespace Abc.Tests
+namespace Tests
 {
     internal class baseTestRepositoryForUniqueEntity<TObj, TData>
         where TObj: Entity<TData>
