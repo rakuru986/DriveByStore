@@ -17,13 +17,13 @@ export class ProductListComponent implements OnInit {
     this.productService.fetchProducts();
     this.productList = this.productService.getProducts();
     this.productList = this.filterListByRoute();
+    console.log(this.productList);
   }
 
   filterListByRoute() {
     if (this.router.url === "/cars") {
       return this.productList.filter((f) => f.productCategory.name === "Cars");
     } else if (this.router.url === "/motorcycles") {
-      console.log(this.productList);
       return this.productList.filter((f) => f.productCategory.name === "Motorcycles");
     } else if (this.router.url === "/bicycles") {
       return this.productList.filter((f) => f.productCategory.name === "Bicycles");

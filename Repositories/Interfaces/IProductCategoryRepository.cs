@@ -1,6 +1,7 @@
 ﻿using Models.Common.Interfaces;
+using Models.Store;
 
-namespace Models.Store.Interfaces
+namespace Repositories.Interfaces
 {
     public interface IProductCategoryRepository : IRepository<ProductCategory>
     {

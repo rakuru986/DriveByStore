@@ -1,4 +1,6 @@
-using Microsoft.AspNetCore.Authentication;
+using System;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -6,13 +8,17 @@ using Soft.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using Models.Common;
 using Models.Context;
-using Models.Store.Interfaces;
 using Repositories;
 using Repositories.Inventory;
 using Repositories.Orders;
 using Repositories.Products;
 using Repositories.Users;
+using Repositories.Interfaces;
+using Services;
+using Services.Interfaces;
 
 namespace Soft
 {
@@ -36,8 +42,10 @@ namespace Soft
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddAuthentication()
-                .AddIdentityServerJwt();
+            //configureJwtToken(services);
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+
             services.AddControllersWithViews();
             services.AddRazorPages();
             // In production, the Angular files will be served from this directory
@@ -45,6 +53,13 @@ namespace Soft
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            //services.AddSingleton<IJwtAuthManager, JwtAuthManager>();
+            services.AddSingleton<IOrderService, OrderService>();
+            services.AddSingleton<IMapperService, MapperService>();
+            services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IProductService, ProductService>();
+            services.AddTransient<IMailService, MailService>();
 
             services.AddScoped<IInventoryRepository, InventoryRepository>();
             services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
@@ -78,6 +93,9 @@ namespace Soft
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -97,6 +115,30 @@ namespace Soft
                 {
                     spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
                 }
+            });
+        }
+
+        public void configureJwtToken(IServiceCollection services)
+        {
+            var jwtTokenConfig = Configuration.GetSection("jwtTokenConfig").Get<JwtTokenConfig>();
+            services.AddSingleton(jwtTokenConfig);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = jwtTokenConfig.Issuer,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtTokenConfig.Secret)),
+                    ValidAudience = jwtTokenConfig.Audience,
+                    ValidateLifetime = true,
+                    ClockSkew = TimeSpan.FromMinutes(1)
+                };
             });
         }
     }

@@ -3,7 +3,7 @@ using Models.Common.Interfaces;
 using Models.Data;
 using Models.Data.Orders;
 
-namespace Models.Store.Interfaces
+namespace Repositories.Interfaces
 {
     public interface IOrderRepository : IRepository<Order>
     {

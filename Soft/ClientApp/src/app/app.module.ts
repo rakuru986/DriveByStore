@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 //import { AppRoutingModule } from './app-routing.module'
 
@@ -23,6 +23,12 @@ import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.comp
 import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { OrderViewComponent } from './components/order-view/order-view.component';
+import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OrderSuccessComponent } from './components/order-view/order-success/order-success.component';
+
 
 
 @NgModule({
@@ -45,6 +51,10 @@ import { RegisterComponent } from './components/register/register.component';
     ProductItemComponent,
     LoginComponent,
     RegisterComponent,
+    OrderViewComponent,
+    ShippingFormComponent,
+    OrderSuccessComponent,    
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -61,8 +71,11 @@ import { RegisterComponent } from './components/register/register.component';
       { path: 'skateboards', component: SkateboardsComponent },
       { path: 'scooters', component: ScootersComponent },
       { path: 'tools', component: ToolsComponent},
-
-    ])
+      { path: 'order', component: OrderViewComponent},
+      { path: 'order/order-success', component: OrderSuccessComponent}
+    ]),
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],

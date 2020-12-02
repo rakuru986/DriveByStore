@@ -3,6 +3,7 @@ using Models.Data;
 using Models.Data.Inventory;
 using Models.Store.Interfaces;
 using Repositories.Common;
+using Repositories.Interfaces;
 
 namespace Repositories.Inventory
 {

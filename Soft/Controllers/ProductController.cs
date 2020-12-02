@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Maps;
 using Microsoft.AspNetCore.Mvc;
-using Models.Store.Interfaces;
-using Services;
+using Repositories.Interfaces;
+using Services.Interfaces;
 using Util;
 using ViewModels;
 
@@ -11,17 +10,16 @@ namespace Soft.Controllers
     public class ProductController : Controller
     {
         private readonly IProductRepository productRepository;
-        private readonly ProductsMapper mapper;
-        private readonly ProductService service;
+        private readonly IMapperService mapper;
+        private readonly IProductService service;
 
-        public ProductController(IProductRepository p)
+        public ProductController(IProductRepository p, IMapperService ms, IProductService ps)
         {
             productRepository = p;
-            mapper = new ProductsMapper();
-            service = new ProductService();
+            mapper = ms;
+            service = ps;
         }
 
-        // product/GetAllProducts
         [HttpGet]
         public async Task<IActionResult> GetAllProducts()
         {
@@ -44,13 +42,10 @@ namespace Soft.Controllers
             if (item == null) return Json(BadRequest());
             if (item.mode != Constants.ADD && item.mode != Constants.REDUCE) return Json(BadRequest("Invalid mode"));
 
-            var product = await productRepository.Get(item.productId);
-
-            if (product.Id == Constants.Unspecified) return Json(BadRequest("Item with given id not found"));
-
-            var updatedProduct = service.changeStock(product, item.changeCount, item.mode);
-            await productRepository.Update(updatedProduct);
-            return Json(Ok(updatedProduct.Data.Stock));
+            var isSuccessfulUpdate = await service.changeStock(item.productId, item.changeCount, item.mode, productRepository);
+            return isSuccessfulUpdate
+                ? Json(Ok("Update successful"))
+                : Json(BadRequest("Item with given id not found"));
         }
     }
 }

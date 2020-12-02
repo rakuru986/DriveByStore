@@ -8,6 +8,26 @@ export class MessengerService {
 
   subject = new Subject()
 
+  products:[]
+
+  totalPrice:number
+
+  setProducts(productsList){
+    this.products=productsList
+  }
+
+  getProducts(){
+    return this.products;
+  }
+
+  setTotal(total){
+    this.totalPrice = total
+  }
+
+  getTotal(){
+    return this.totalPrice;
+  }
+
   constructor() { }
 
   sendMsg(product){

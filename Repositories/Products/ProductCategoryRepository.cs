@@ -2,8 +2,8 @@
 using Models.Data;
 using Models.Data.Products;
 using Models.Store;
-using Models.Store.Interfaces;
 using Repositories.Common;
+using Repositories.Interfaces;
 
 namespace Repositories.Products
 {

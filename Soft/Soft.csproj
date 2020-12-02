@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
@@ -45,12 +46,24 @@
     <Compile Remove="Data\Migrations\20201004201350_initial.Designer.cs" />
     <Compile Remove="Migrations\20201104100640_initial.cs" />
     <Compile Remove="Migrations\20201104100640_initial.Designer.cs" />
+    <Compile Remove="Migrations\20201115131743_initial.cs" />
+    <Compile Remove="Migrations\20201115131743_initial.Designer.cs" />
+    <Compile Remove="Migrations\20201124235616_initial.cs" />
+    <Compile Remove="Migrations\20201124235616_initial.Designer.cs" />
+    <Compile Remove="Migrations\20201124235820_initial.cs" />
+    <Compile Remove="Migrations\20201124235820_initial.Designer.cs" />
+    <Compile Remove="Migrations\20201125005518_initial.cs" />
+    <Compile Remove="Migrations\20201125005518_initial.Designer.cs" />
+    <Compile Remove="Migrations\20201125073216_initial.cs" />
+    <Compile Remove="Migrations\20201125073216_initial.Designer.cs" />
+    <Compile Remove="Migrations\20201128152844_initi4.cs" />
+    <Compile Remove="Migrations\20201128152844_initi4.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Maps\Maps.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 

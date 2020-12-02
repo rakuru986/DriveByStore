@@ -5,9 +5,9 @@ using BC = BCrypt.Net.BCrypt;
 
 namespace Services
 { 
-    public class UserService
+    public class UserService : IUserService
     {
-        public bool matchUser(LoginUserViewModel user, UserData foundUser)
+        public bool verifyUser(LoginUserViewModel user, UserData foundUser)
         {
 
             return BC.Verify(user.password, foundUser.PasswordHash);
