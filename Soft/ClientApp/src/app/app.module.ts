@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 //import { AppRoutingModule } from './app-routing.module'
 
+
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -28,6 +29,7 @@ import { ShippingFormComponent } from './components/shipping-form/shipping-form.
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OrderSuccessComponent } from './components/order-view/order-success/order-success.component';
+
 
 
 
@@ -60,7 +62,7 @@ import { OrderSuccessComponent } from './components/order-view/order-success/ord
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,    
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'register', component: RegisterComponent },

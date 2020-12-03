@@ -27,5 +27,5 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.accountService.login(this.loginForm.controls.email.value, this.loginForm.controls.password.value);
-  }
+  }  
 }

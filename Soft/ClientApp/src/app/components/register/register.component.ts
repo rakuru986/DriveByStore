@@ -13,7 +13,7 @@ import { passwordsMatchValidator } from 'src/app/helpers/passwordsMatchValidator
 
 export class RegisterComponent implements OnInit {  
 
-  registerForm: FormGroup;
+  registerForm: FormGroup;  
 
   constructor(private builder: FormBuilder, private accountService: AccountService) { }
 
@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
       confirmPassword: ''
     }, {
       validators: passwordsMatchValidator
-    })
+    })    
   }
 
   register(){
