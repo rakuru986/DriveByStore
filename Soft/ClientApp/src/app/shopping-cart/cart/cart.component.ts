@@ -21,7 +21,7 @@ export class CartComponent implements OnInit{
     
 
     ngOnInit(){
-
+        this.localStorageService.set('product', [])
         this.cartItems = this.localStorageService.get('product')
         this.msg.getMsg().subscribe((product: Product)=>{            
             this.addProductToCart(product)                                    

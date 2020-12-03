@@ -6,6 +6,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { OrderService } from 'src/app/services/order.service';
 import { ProductService } from 'src/app/services/product.service';
+import { LocalStorageService } from 'src/app/services/localStorage.service';
 
 @Component({
   selector: 'app-order-view',
@@ -52,6 +53,7 @@ export class OrderViewComponent implements OnInit {
     console.log(this.orderProducts);
     console.log(this.orderForm.value);
     this.orderService.placeOrder(this.orderForm.value, this.orderProducts, this.orderTotalPrice);
+    localStorage.removeItem('product');
   }
 
 }
