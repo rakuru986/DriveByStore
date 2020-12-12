@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ProductService } from "src/app/services/product.service";
 import { Product } from "src/app/models/product.model";
 import { Router } from "@angular/router";
+import { FilterService } from "src/app/services/filter.service";
 
 @Component({
   selector: "app-product-list",
@@ -11,12 +12,13 @@ import { Router } from "@angular/router";
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router, private filterService: FilterService) {}
 
   ngOnInit() {
     this.productService.fetchProducts();
     this.productList = this.productService.getProducts();
     this.productList = this.filterListByRoute();
+    this.productList = this.filterWithPriceFilter();
     console.log(this.productList);
   }
 
@@ -34,5 +36,16 @@ export class ProductListComponent implements OnInit {
     } else {
       return this.productList.filter((f) => f.productCategory.name === "Tools");
     }
+  }
+
+  filterWithPriceFilter() {
+    //this.filterService.set()
+    let from = this.filterService.getFrom();
+    let to = this.filterService.getTo();
+    // console.log(from)
+    // console.log(to)
+    
+    return this.productList.filter((f) => f.price < to && f.price > from);
+    
   }
 }

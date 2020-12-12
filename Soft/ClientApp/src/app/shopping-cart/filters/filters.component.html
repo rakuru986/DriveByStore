@@ -3,18 +3,28 @@
 
     <div class="card">
         <div class="card-body">
-            <form>
+            <form [formGroup]= "filterForm" (ngSubmit)="filter()">
                 <div class="form-group">
                     <label for="from">From</label>
-                    <input type="number" id="from" class="form-control">
+                    <input type="number"
+                    min=0              
+                    placeholder=0     
+                    id="from" 
+                    formControlName="from"
+                    class="form-control">                    
                 </div>
             
                 <div class="form-group">
                     <label for="to">To</label>
-                    <input type="number" if="to" class="form-control">
+                    <input type="number" 
+                    min=0 
+                    placeholder=1000000      
+                    id="to" 
+                    formControlName="to"
+                    class="form-control">
                 </div>
             
-                <button class="btn-btn-primary btn-block btn-sm">Filter by Price</button>
+                <button class="btn-btn-primary btn-block btn-sm" type="submit" onClick="window.location.reload()">Filter by Price</button>
             </form>
 
         </div>
