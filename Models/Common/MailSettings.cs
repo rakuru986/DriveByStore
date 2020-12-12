@@ -1,6 +1,6 @@
 ﻿namespace Models.Common
 {
-    public class MailSettings
+    public sealed class MailSettings
     {
         public string Mail { get; set; }
         public string DisplayName { get; set; }

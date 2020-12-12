@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Models.Data;
-using Models.Data.Inventory;
 using Models.Data.Orders;
 using Models.Data.Products;
 using Models.Data.Users;
@@ -9,7 +7,6 @@ namespace Models.Context
 {
     public class StoreDbContext : DbContext
     {
-        public DbSet<InventoryData> Inventory { get; set; }
         public DbSet<OrderData> Orders { get; set; }
         public DbSet<OrderDetailsData> OrderDetails { get; set; }
         public DbSet<ProductCategoriesData> ProductCategories { get; set; }
@@ -27,11 +24,6 @@ namespace Models.Context
         public static void InitializeTables(ModelBuilder builder)
         {
             if (builder is null) return;
-            builder.Entity<InventoryData>()
-                .HasOne(c => c.Product)
-                .WithMany()
-                .HasForeignKey(c => c.ProductId);
-            builder.Entity<InventoryData>().ToTable(nameof(Inventory));
 
             builder.Entity<OrderData>().ToTable(nameof(Orders));
 

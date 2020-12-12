@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Models.Data;
 using Models.Data.Products;
 
 namespace Models.Context

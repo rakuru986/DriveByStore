@@ -85,25 +85,6 @@ namespace Soft.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Inventory",
-                columns: table => new
-                {
-                    Id = table.Column<string>(nullable: false),
-                    ProductId = table.Column<string>(nullable: true),
-                    Stock = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Inventory", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Inventory_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "OrderDetails",
                 columns: table => new
                 {
@@ -131,11 +112,6 @@ namespace Soft.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Inventory_ProductId",
-                table: "Inventory",
-                column: "ProductId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OrderDetails_OrderId",
                 table: "OrderDetails",
                 column: "OrderId");
@@ -158,9 +134,6 @@ namespace Soft.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Inventory");
-
             migrationBuilder.DropTable(
                 name: "OrderDetails");
 

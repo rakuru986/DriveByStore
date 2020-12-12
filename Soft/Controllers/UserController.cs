@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Models.Store.Interfaces;
-using Repositories.Interfaces;
 using Services.Interfaces;
 using ViewModels;
 
@@ -38,7 +37,7 @@ namespace Soft.Controllers
             var foundUser = await userRepository.getUserByEmail(user.email);
             if (foundUser != null)
             {
-                return service.verifyUser(user, foundUser) ? Json(Ok(foundUser)) : Json(Unauthorized("Wrong username or password"));
+                return service.verifyUser(user.password, foundUser.PasswordHash) ? Json(Ok(foundUser)) : Json(Unauthorized("Wrong username or password"));
             }
             return Json(Unauthorized("Wrong username or password"));
         }

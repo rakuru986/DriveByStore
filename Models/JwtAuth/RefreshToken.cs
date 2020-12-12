@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Models.JwtAuth
 {
-    public class RefreshToken
+    public sealed class RefreshToken
     {
         [JsonPropertyName("email")]
         public string Email { get; set; }

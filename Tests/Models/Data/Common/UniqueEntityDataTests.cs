@@ -1,8 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Models.Data;
 using Models.Data.Common;
-using Models.Store;
-using Repositories.Common;
 
 namespace Tests.Models.Data.Common {
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Models.Data;
 using Models.Data.Common;
 using Models.Data.Orders;
 using Models.Data.Users;

@@ -1,17 +1,13 @@
-﻿using Models.Data;
-using Models.Data.Users;
-using Services.Interfaces;
-using ViewModels;
+﻿using Services.Interfaces;
 using BC = BCrypt.Net.BCrypt;
 
 namespace Services
 { 
     public class UserService : IUserService
     {
-        public bool verifyUser(LoginUserViewModel user, UserData foundUser)
+        public bool verifyUser(string password, string foundUserHash)
         {
-
-            return BC.Verify(user.password, foundUser.PasswordHash);
+            return BC.Verify(password, foundUserHash);
         }
 
         public string generatePasswordHash(string password)

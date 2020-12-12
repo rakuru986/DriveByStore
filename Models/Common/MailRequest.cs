@@ -1,6 +1,6 @@
 ﻿namespace Models.Common
 {
-    public class MailRequest
+    public sealed class MailRequest
     {
         public string ToEmail { get; set; }
         public string Subject { get; set; }

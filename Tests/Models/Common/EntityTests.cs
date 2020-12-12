@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common;
 using Models.Common.Interfaces;
 using Models.Data.Common;
-using Models.Data.Orders;
 using Models.Data.Users;
-using Models.Store;
 using Util.Random;
-using Util.Reflection;
 
 namespace Tests.Models.Common
 {
@@ -47,14 +41,6 @@ namespace Tests.Models.Common
             obj = new testClass(d);
             Assert.AreNotSame(d, obj.Data);
             arePropertiesEqual(d, obj.Data);
-        }
-
-        [TestMethod]
-        public void CanSetNullDataTest()
-        {
-            obj = new testClass();
-            Assert.IsNotNull(obj.Data);
-            //Assert.IsTrue(obj.IsUnspecified);
         }
 
         [TestMethod]

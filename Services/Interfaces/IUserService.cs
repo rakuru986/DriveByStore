@@ -1,12 +1,8 @@
-﻿using Models.Data;
-using Models.Data.Users;
-using ViewModels;
-
-namespace Services.Interfaces
+﻿namespace Services.Interfaces
 {
     public interface IUserService
     {
-        bool verifyUser(LoginUserViewModel user, UserData foundUser);
+        bool verifyUser(string password, string foundUserHash);
         string generatePasswordHash(string password);
     }
 }

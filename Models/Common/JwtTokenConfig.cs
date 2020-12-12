@@ -1,6 +1,6 @@
 ﻿namespace Models.Common
 {
-    public class JwtTokenConfig
+    public sealed class JwtTokenConfig
     {
         public string Secret { get; set; }
         public string Issuer { get; set; }

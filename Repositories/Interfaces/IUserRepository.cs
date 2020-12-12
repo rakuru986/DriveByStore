@@ -1,7 +1,6 @@
 ﻿
  using System.Threading.Tasks;
 using Models.Common.Interfaces;
-using Models.Data;
  using Models.Data.Users;
 
 

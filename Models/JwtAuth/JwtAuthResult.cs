@@ -2,7 +2,7 @@
 
 namespace Models.JwtAuth
 {
-    public class JwtAuthResult
+    public sealed class JwtAuthResult
     {
         [JsonPropertyName("accessToken")]
         public string AccessToken { get; set; }

@@ -3,7 +3,6 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Soft.Data;
 
 namespace Soft.Migrations
@@ -18,24 +17,6 @@ namespace Soft.Migrations
                 .HasAnnotation("ProductVersion", "3.1.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Models.Data.Inventory.InventoryData", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Stock")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("Inventory");
-                });
 
             modelBuilder.Entity("Models.Data.Orders.OrderData", b =>
                 {
@@ -168,13 +149,6 @@ namespace Soft.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("Models.Data.Inventory.InventoryData", b =>
-                {
-                    b.HasOne("Models.Data.Products.ProductData", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
                 });
 
             modelBuilder.Entity("Models.Data.Orders.OrderData", b =>

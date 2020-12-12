@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using Models.Data;
 using Models.Data.Products;
 using Models.Store;
 using Repositories.Interfaces;
@@ -21,7 +20,7 @@ namespace Services
             return true;
         }
 
-        private Product getUpdatedProduct(Product product, int changeCount, string mode)
+        internal Product getUpdatedProduct(Product product, int changeCount, string mode)
         {
             int newStock = product.Data.Stock;
             if (mode == Constants.ADD) { newStock += changeCount; }

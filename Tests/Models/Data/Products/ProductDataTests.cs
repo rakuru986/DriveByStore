@@ -1,7 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Models.Data;
 using Models.Data.Common;
-using System;
 using Models.Data.Products;
 
 namespace Tests.Models.Data.Products

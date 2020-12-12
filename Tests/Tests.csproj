@@ -28,7 +28,6 @@
   <ItemGroup>
     <Folder Include="Models\Data\Common\" />
     <Folder Include="Models\Data\Orders\" />
-    <Folder Include="Models\Store\" />
   </ItemGroup>
 
 </Project>

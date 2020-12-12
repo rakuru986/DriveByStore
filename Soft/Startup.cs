@@ -12,8 +12,6 @@ using Microsoft.IdentityModel.Tokens;
 using Models.Common;
 using Models.Context;
 using Models.Store.Interfaces;
-using Repositories;
-using Repositories.Inventory;
 using Repositories.Orders;
 using Repositories.Products;
 using Repositories.Users;
@@ -62,7 +60,6 @@ namespace Soft
             services.AddSingleton<IProductService, ProductService>();
             services.AddTransient<IMailService, MailService>();
 
-            services.AddScoped<IInventoryRepository, InventoryRepository>();
             services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();

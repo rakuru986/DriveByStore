@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models.Common;
-using Models.Data.Common;
 using Models.Data.Products;
 using Models.Store;
 using Util.Random;

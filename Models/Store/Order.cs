@@ -1,5 +1,4 @@
 ﻿using Models.Common;
-using Models.Data;
 using Models.Data.Orders;
 
 namespace Models.Store
