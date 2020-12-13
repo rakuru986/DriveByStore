@@ -10,10 +10,5 @@ namespace Tests.Models.Store
 
     [TestClass]
     public class ProductCategoryTests : SealedTests<ProductCategory, UniqueEntity<ProductCategoriesData>>
-    {
-
-        protected override ProductCategory createObject() =>
-            new ProductCategory(GetRandom.Object<ProductCategoriesData>());
-
-    }
+    { }
 }

@@ -14,7 +14,7 @@ using Util.Reflection;
 namespace Tests.Models.Common
 {
     [TestClass]
-    public class EntityTests : AbstractClassTests<Entity<UserData>, IEntity<UniqueEntityData>>
+    public class EntityTests : AbstractClassTests<Entity<UserData>, UniqueEntity<UserData>>
     {
 
         private class testClass : Entity<UserData>

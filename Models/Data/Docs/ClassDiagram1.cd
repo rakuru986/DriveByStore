@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Models.Data.Common.UniqueEntityData" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Common\UniqueEntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Data.Inventory.InventoryData">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Inventory\InventoryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Data.Orders.OrderData">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAUAAAAAAAAAACAE0AAAAAQAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Data\Orders\OrderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Data.Orders.OrderDetailsData">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAECAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Data\Orders\OrderDetailsData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Data.Products.ProductCategoriesData">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Products\ProductCategoriesData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Data.Products.ProductData">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgAAAAAAAAAAQAgAAAABAAAAACAAAAEAA=</HashCode>
+      <FileName>Data\Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Data.Users.UserData">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Data\Users\UserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
