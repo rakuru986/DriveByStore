@@ -6,6 +6,6 @@ namespace Services.Interfaces
 {
     public interface IOrderService
     {
-        Task SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository, string orderId);
+        void SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository, string orderId);
     }
 }

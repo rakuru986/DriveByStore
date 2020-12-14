@@ -19,7 +19,19 @@ namespace Services
             mailService = ms;
         }
 
-        public async Task SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository, string orderId)
+        public async void SendOrderConfirmation(CreateOrderViewModel order, IProductRepository productRepository, string orderId)
+        {
+            string mailText = await buildEmailNotificationHtml(order, productRepository, orderId);
+            var mail = new MailRequest
+            {
+                Body = mailText,
+                Subject = Constants.OrderConfirmationEmailSubject,
+                ToEmail = order.email
+            };
+            mailService.SendEmail(mail);
+        }
+
+        private async Task<string> buildEmailNotificationHtml(CreateOrderViewModel order, IProductRepository productRepository, string orderId)
         {
             string filePath = Directory.GetCurrentDirectory() + "\\..\\Util\\EmailTemplates\\OrderConfirmation.html";
             StreamReader str = new StreamReader(filePath);
@@ -44,13 +56,8 @@ namespace Services
                 .Replace("[estimated-delivery-date]", DateTime.Today.AddDays(10).ToLongDateString())
                 .Replace("[order-number]", orderId.Substring(0, 8))
                 .Replace("[total]", order.total.ToString(CultureInfo.CurrentCulture));
-            var mail = new MailRequest
-            {
-                Body = mailText,
-                Subject = Constants.OrderConfirmationEmailSubject,
-                ToEmail = order.email
-            };
-            await mailService.SendEmail(mail);
+
+            return mailText;
         }
     }
 }

@@ -5,6 +5,6 @@ namespace Services.Interfaces
 {
     public interface IMailService
     {
-        Task SendEmail(MailRequest mailRequest);
+        void SendEmail(MailRequest mailRequest);
     }
 }

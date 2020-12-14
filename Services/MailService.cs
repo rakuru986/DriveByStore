@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Reflection.Metadata.Ecma335;
+using System.Threading.Tasks;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Options;
@@ -17,7 +19,7 @@ namespace Services
             mailSettings = settings.Value;
         }
 
-        public async Task SendEmail(MailRequest mailRequest)
+        public void SendEmail(MailRequest mailRequest)
         {
             var email = new MimeMessage();
             email.Sender = MailboxAddress.Parse(mailSettings.Mail);
@@ -28,9 +30,9 @@ namespace Services
             email.Body = builder.ToMessageBody();
 
             using var smtp = new SmtpClient();
-            smtp.Connect(mailSettings.Host, mailSettings.Port, SecureSocketOptions.SslOnConnect);
+            smtp.Connect(mailSettings.Host, mailSettings.Port, SecureSocketOptions.StartTls);
             smtp.Authenticate(mailSettings.Mail, mailSettings.Password);
-            await smtp.SendAsync(email);
+            smtp.Send(email);
             smtp.Disconnect(true);
         }
     }
