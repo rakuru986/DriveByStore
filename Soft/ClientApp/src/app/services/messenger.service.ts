@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs'
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,13 @@ export class MessengerService {
 
   subject = new Subject()
 
+  removedSubject = new Subject()
+
   products:[]
 
   totalPrice:number
+
+  removedProducts = []
 
   setProducts(productsList){
     this.products=productsList
@@ -26,6 +31,16 @@ export class MessengerService {
 
   getTotal(){
     return this.totalPrice;
+  }
+
+  sendRemoveMsg(product){
+    // this.removedProducts = []
+    // this.removedProducts.push(product);
+    this.removedSubject.next(product);
+  }
+
+  getRemoveMsg(){
+    return this.removedSubject.asObservable()
   }
 
   constructor() { }

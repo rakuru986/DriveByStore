@@ -24,20 +24,27 @@ export class CartComponent implements OnInit{
         if(localStorage.getItem('product') === null)
         {
           this.localStorageService.set('product', [])
-        }        
+        }
         this.cartItems = this.localStorageService.get('product')
+        this.calculateCartTotal();
+        
         this.msg.getMsg().subscribe((product: Product)=>{            
             this.addProductToCart(product)                                    
         })
-        
-    }    
 
-    // persist(key: string, value: any)
-    // {
-    //     this.localStorageService.set(key, value);
+        // this.msg.getRemoveMsg().subscribe((product: Product)=>{
+        //   this.addProductBackToStock(product)
+        // })   
+    }   
+    
+    // addProductBackToStock(product: Product){
+    //   product.stock += 1;
     // }
 
-    removeProductFromCart(product, index){        
+    removeProductFromCart(product, index){
+
+      this.msg.sendRemoveMsg(product);      
+
         for ( let i in this.cartItems) {            
             if ( this.cartItems[i] === product)
              {

@@ -14,20 +14,23 @@ export class ProductItemComponent implements OnInit{
 
     constructor(private msg: MessengerService) { }
 
-    ngOnInit() {}
+    enoughStock: boolean = true;
 
-    handleAddToCart(){        
-        if(this.productItem.stock > 0){
-            this.msg.sendMsg(this.productItem)
-            // this.productItem.stock -= 1;
-        }
-        else
-        {
-            console.log("Pole piisavalt tooteid")
-        }
+    ngOnInit() { 
+        
+    }   
+
+    handleAddToCart(){
+        this.productItem.stock -= 1;
+        if(this.productItem.stock > -1){
+            if(this.productItem.stock === 0){
+                this.enoughStock = false;
+                this.msg.sendMsg(this.productItem);
+            }
+            else{
+                this.enoughStock = true;
+                this.msg.sendMsg(this.productItem);
+            }            
+        }        
     }
-
-    
-    
-
 }
